@@ -6,7 +6,7 @@ export const ThemeProvider = ({ children }) => {
   const [isDarkMode, setIsDarkMode] = useState(() => {
     // Check if user has a theme preference in localStorage
     const savedTheme = localStorage.getItem('theme');
-    return savedTheme ? savedTheme === 'dark' : false;
+    return savedTheme ? savedTheme === 'dark' : true;
   });
 
   useEffect(() => {

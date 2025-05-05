@@ -1,12 +1,25 @@
 import React from 'react'
-
+import { Link } from 'react-router-dom';
 const projects = [
   {
-    year: '2022',
+    year: '2025',
     title: 'Growvyn',
     desc: 'A web app for self development and self growth.',
-    links: { article: '#', demo: '#' }
+    links: { Webstite: 'https://growvyn.com/' }
   },
+  {
+    year: '2022',
+    title: 'Js Challenges',
+    desc: 'a platform for javascript enthusiasts to test and improve their skills through daily challenges.',
+    links: { Webstite: 'https://dailyjschallenges.com/' }
+  },
+  {
+    year: '2022',
+    title: 'Body Puzzle',
+    desc: 'A 3D puzzle game where the player must solve the puzzle by rotating the cubes.',
+    links: { Webstite: 'https://skeleton-amber.vercel.app/' }
+  }
+
 ]
 
 export default function Projects() {
@@ -17,41 +30,44 @@ export default function Projects() {
           <div>
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">Projects</h2>
             <p className="text-gray-600 dark:text-gray-400 text-lg">
-              Open-source projects I've worked on over the years.
+              Personal projects I've worked on over the years.
             </p>
           </div>
-          <a
-            href="#all"
+          <Link
+            //scroll to top
+            onClick={() => window.scrollTo(0, 0)}
+            to="/projects"
             className="text-indigo-600 dark:text-indigo-400 hover:text-indigo-500 dark:hover:text-indigo-300 transition-colors duration-300 font-medium"
           >
             View All Projects →
-          </a>
+          </Link>
         </div>
 
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
           {projects.map((p) => (
-            <div
+            <a
               key={p.title}
-              className="group bg-gray-50 dark:bg-gray-800 p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
+              href={p.links.Webstite}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group bg-gray-50 dark:bg-gray-800 p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 cursor-pointer"
             >
               <div className="flex items-center justify-between mb-4">
                 <span className="text-sm text-gray-500 dark:text-gray-400">{p.year}</span>
                 <div className="flex gap-2">
                   {p.links.article && (
-                    <a
-                      href={p.links.article}
-                      className="px-3 py-1 text-sm border border-gray-300 dark:border-gray-700 text-gray-700 dark:text-gray-300 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors duration-300"
+                    <span
+                      className="px-3 py-1 text-sm border border-gray-300 dark:border-gray-700 text-gray-700 dark:text-gray-300 rounded-full"
                     >
                       Article
-                    </a>
+                    </span>
                   )}
-                  {p.links.demo && (
-                    <a
-                      href={p.links.demo}
-                      className="px-3 py-1 text-sm border border-gray-300 dark:border-gray-700 text-gray-700 dark:text-gray-300 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors duration-300"
+                  {p.links.Webstite && (
+                    <span
+                      className="px-3 py-1 text-sm border border-gray-300 dark:border-gray-700 text-gray-700 dark:text-gray-300 rounded-full"
                     >
                       Demo
-                    </a>
+                    </span>
                   )}
                 </div>
               </div>
@@ -59,7 +75,7 @@ export default function Projects() {
                 {p.title}
               </h3>
               <p className="text-gray-600 dark:text-gray-400">{p.desc}</p>
-            </div>
+            </a>
           ))}
         </div>
       </div>

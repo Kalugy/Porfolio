@@ -1,6 +1,6 @@
 import Header from '../components/Home/Header';
 
-import Projects from '../components/Home/Projects';
+import Projects from '../components/Home/ProjectsHome';
 
 function HomeScreen() {
  

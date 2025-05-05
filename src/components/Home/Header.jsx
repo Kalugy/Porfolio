@@ -6,11 +6,11 @@ const ContactUsSection = () => {
       <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-16">
         {/* Left Side Content */}
         <div className="text-black dark:text-white text-center lg:text-left space-y-6">
-          <h1 className="text-4xl md:text-6xl text-left font-extrabold">Hey, I'm Julian!</h1>
-          <h2 className="text-xl md:text-3xl font-medium mb-4">
-            I’m a Systems & Computer Engineer passionate about building websites and digital projects since 2014 i started creating projects for University.
+          <h1 className="text-2xl md:text-4xl text-left font-extrabold">Hey, I'm Julian!</h1>
+          <h2 className="text-xl md:text-2xl font-medium mb-4">
+            I’m a Systems & Computer Engineer passionate about building projects since 2014 i started creating projects and start coding.
           </h2>
-          <p className="text-lg md:text-xl leading-relaxed mb-6">
+          <p className="text-md md:text-lg leading-relaxed mb-6">
             When I'm not coding, you'll find me playing sports, diving into anime and manga, gaming, or exploring nature.
           </p>
           <div className="flex gap-4 justify-center lg:justify-start">

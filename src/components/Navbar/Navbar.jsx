@@ -9,7 +9,7 @@ const Navbar = () => {
 
   const menuItems = [
     { name: "About me", href: "#about" },
-    { name: "Projects", href: "#services" },
+    { name: "Projects", href: "/projects" },
     { name: "Contact", href: "#contact" },
     // { name: "Comprar", href: "https://web.whatsapp.com/", isButton: true },
   ];
