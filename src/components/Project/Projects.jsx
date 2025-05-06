@@ -213,7 +213,7 @@ const projects = [
 
 const categories = [
   { id: 'all', name: 'All Projects' },
-  { id: 'webapp', name: 'Web Applications' },
+  { id: 'webapp', name: 'Web/Mobile Applications' },
   { id: 'game', name: 'Games' },
   { id: 'art', name: 'Art & Visual Design' }
 ];
@@ -227,7 +227,7 @@ const Projects = () => {
     : projects.filter(project => project.category === selectedCategory);
 
   return (
-    <section className="py-20 px-4 bg-white dark:bg-gray-900">
+    <section className="py-28 px-4 bg-white dark:bg-gray-900">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">

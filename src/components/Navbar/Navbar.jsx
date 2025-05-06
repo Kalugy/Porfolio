@@ -8,9 +8,9 @@ const Navbar = () => {
   const { isDarkMode, toggleTheme } = useTheme();
 
   const menuItems = [
-    { name: "About me", href: "#about" },
     { name: "Projects", href: "/projects" },
-    { name: "Contact", href: "#contact" },
+    { name: "Resume", href: "/resume" },
+    { name: "Contact", href: "/contact" },
     // { name: "Comprar", href: "https://web.whatsapp.com/", isButton: true },
   ];
 
