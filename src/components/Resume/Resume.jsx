@@ -75,6 +75,12 @@ const education = [
 
 const certifications = [
   {
+    title: 'Unity Essential',
+    platform: 'Unity',
+    date: 'May 2025',
+    skills: ['Knowledge Acquisition']
+  },
+  {
     title: 'AWS Certified Cloud Practitioner',
     platform: 'Amazon Web Services (AWS)',
     date: 'April 2025',

@@ -22,7 +22,7 @@ const socialLinks = [
 export default function ContactHome() {
   return (
     <section className="py-20 px-4 bg-white dark:bg-gray-900">
-      <div className="max-w-4xl mx-auto">
+      <div className="max-w-5xl mx-auto">
         <div className="flex items-center justify-between mb-12">
           <div>
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">Get in Touch</h2>

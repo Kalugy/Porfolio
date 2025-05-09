@@ -16,13 +16,13 @@ const ContactUsSection = () => {
           <div className="flex gap-4 justify-center lg:justify-start">
             <a
               href="#about"
-              className="bg-[#D08C00] text-white px-6 py-3 rounded-md hover:bg-[#bb7800] transition shadow-sm"
+              className="bg-indigo-500 text-white px-6 py-3 rounded-md hover:bg-indigo-800 transition shadow-sm"
             >
               About me
             </a>
             <a
-              href="#productos"
-              className="bg-[#D08C00] text-white px-6 py-3 rounded-md hover:bg-[#bb7800] transition hover:bg-[#136245] shadow-sm"
+              href="#projects"
+              className="bg-indigo-500 text-white px-6 py-3 rounded-md hover:bg-indigo-800 transition hover:bg-[#136245] shadow-sm"
             >
               Projects
             </a>
@@ -33,7 +33,7 @@ const ContactUsSection = () => {
         {/* Right Side Image */}
         <div className="flex justify-center items-center w-full lg:w-[90%]">
           <img
-            src="/images/profile2.png" // Replace with your image path
+            src="/images/profi2.png" // Replace with your image path
             alt="Illustration of honey production"
             className="w-full h-auto rounded-lg"
           />
