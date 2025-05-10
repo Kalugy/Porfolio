@@ -2,8 +2,9 @@ import React from "react";
 
 const ContactUsSection = () => {
   return (
-    <section className="flex items-center min-h-screen justify-center bg-white dark:bg-gray-900 py-24 px-6 lg:px-32">
-      <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-16">
+<section
+  className="flex items-center justify-center min-h-screen py-24 px-6 lg:px-32 bg-gradient-to-b from-[#FFF4D6] to-white dark:from-gray-800 dark:to-gray-900"
+>      <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-16">
         {/* Left Side Content */}
         <div className="text-black dark:text-white text-center lg:text-left space-y-6">
           <h1 className="text-2xl md:text-4xl text-left font-extrabold">Hey, I'm Julian!</h1>
@@ -31,11 +32,11 @@ const ContactUsSection = () => {
         </div>
 
         {/* Right Side Image */}
-        <div className="flex justify-center items-center w-full lg:w-[90%]">
+        <div className="flex justify-center items-center w-full lg:w-[90%] border-2 border-indigo-800 dark:border-1 ">
           <img
             src="/images/profi2.png" // Replace with your image path
-            alt="Illustration of honey production"
-            className="w-full h-auto rounded-lg"
+            alt="Profile pic header home julian porfolio"
+            className="w-full h-auto rounded-lg "
           />
         </div>
       </div>
