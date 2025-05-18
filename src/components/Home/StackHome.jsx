@@ -1,4 +1,6 @@
 // src/components/StackDiagram.jsx
+import React from 'react'
+import { Link } from 'react-router-dom';
 import {
   FaPhp,
   FaLaravel,
@@ -76,23 +78,95 @@ const techGroups = [
   },
 ];
 
-const StackHome = () => {
+const stacks = [
+  {
+    name: 'Frontend',
+    icon: '🎨',
+    desc: 'React, Next.js, Tailwind CSS, and more.',
+    color: 'from-blue-500 to-indigo-600'
+  },
+  {
+    name: 'Backend',
+    icon: '⚙️',
+    desc: 'Node.js, Express, MongoDB, and more.',
+    color: 'from-green-500 to-emerald-600'
+  },
+  {
+    name: 'Mobile',
+    icon: '📱',
+    desc: 'React Native, Flutter, and more.',
+    color: 'from-purple-500 to-pink-600'
+  },
+  {
+    name: 'DevOps',
+    icon: '🚀',
+    desc: 'Docker, AWS, CI/CD, and more.',
+    color: 'from-orange-500 to-red-600'
+  }
+]
+
+export default function StackHome() {
   return (
-    <section className="py-20 bg-white dark:bg-gray-900 relative overflow-hidden">
-      <div className="max-w-7xl mx-auto px-6">
-        <h2 className="text-4xl font-bold text-center text-gray-900 dark:text-white mb-12">Tech Stack Diagram</h2>
-        <div className="flex flex-col items-center space-y-10 lg:flex-row lg:space-x-10 lg:space-y-0 lg:justify-between">
-          {techGroups.map((group, idx) => (
-            <div key={idx} className="flex flex-col items-center w-full max-w-md lg:w-1/5">
-              <TechGroup {...group} />
+    <section className="py-24 px-4 bg-gradient-to-b from-gray-50 to-white dark:from-gray-800 dark:to-gray-900" id="stack">
+      <div className="max-w-7xl mx-auto">
+        <div className="flex flex-col md:flex-row items-start md:items-center justify-between mb-16">
+          <div className="mb-8 md:mb-0">
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">
+              Tech Stack
+            </h2>
+            <p className="text-gray-600 dark:text-gray-400 text-lg max-w-2xl">
+              Explore the technologies and tools I use to build modern, scalable, and performant applications.
+            </p>
+          </div>
+          <Link
+            onClick={() => window.scrollTo(0, 0)}
+            to="/stack"
+            className="inline-flex items-center px-6 py-3 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition-all duration-300 transform hover:-translate-y-1 hover:shadow-lg"
+          >
+            View Full Stack
+            <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+            </svg>
+          </Link>
+        </div>
+
+        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
+          {stacks.map((stack) => (
+            <div
+              key={stack.name}
+              className="group relative bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 overflow-hidden"
+            >
+              <div className={`absolute top-0 right-0 w-32 h-32 bg-gradient-to-br ${stack.color} opacity-10 rounded-bl-full transform translate-x-16 -translate-y-16 transition-transform duration-300 group-hover:scale-150`} />
+              
+              <div className="relative">
+                <div className="flex items-center justify-between mb-6">
+                  <span className="text-4xl transform transition-transform duration-300 group-hover:scale-110">
+                    {stack.icon}
+                  </span>
+                </div>
+
+                <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4 group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors duration-300">
+                  {stack.name}
+                </h3>
+                
+                <p className="text-gray-600 dark:text-gray-400 mb-6 leading-relaxed">
+                  {stack.desc}
+                </p>
+                
+                <div className="flex items-center text-indigo-600 dark:text-indigo-400 font-medium">
+                   Learn More 
+                  <svg className="w-5 h-5 ml-2 transform group-hover:translate-x-2 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                  </svg>
+                </div>
+              </div>
             </div>
           ))}
         </div>
       </div>
     </section>
-  );
-};
-
+  )
+}
 
 const TechGroup = ({ title, color, items }) => (
   <div className={`p-6 rounded-xl shadow-md ${color} w-full`}>
@@ -107,5 +181,3 @@ const TechGroup = ({ title, color, items }) => (
     </div>
   </div>
 );
-
-export default StackHome;
