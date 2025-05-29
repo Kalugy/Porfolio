@@ -30,6 +30,7 @@ import {
   SiNetlify,
   SiFigma,
   SiAdobexd,
+  SiUnity,
 } from 'react-icons/si';
 
 const Stack = () => {
@@ -47,6 +48,7 @@ const Stack = () => {
         { name: "CSS3", icon: <FaCss3Alt className="w-8 h-8 text-[#1572B6]" />, level: "Advanced" },
         { name: "Tailwind CSS", icon: <SiTailwindcss className="w-8 h-8 text-[#06B6D4]" />, level: "Advanced" },
         { name: "Redux", icon: <SiRedux className="w-8 h-8 text-[#764ABC]" />, level: "Intermediate" },
+        { name: "Unity", icon: <SiUnity className="w-8 h-8 text-[#000000]" />, level: "Intermediate" },
       ]
     },
     {
