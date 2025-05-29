@@ -26,12 +26,18 @@ const ContactUsSection = () => {
           </div>
           
           <h2 className="text-lg sm:text-xl md:text-2xl font-medium mb-2 sm:mb-4 leading-relaxed">
-            I'm a Systems & Computer Engineer passionate about building projects since 2014 i started creating projects and start coding.
+            Focused on building digital products. I've worked on websites, games, and full stack projects as a developer across different{' '}
+            <a href="#stack" className="text-indigo-600 dark:text-indigo-400 hover:underline font-semibold">
+              stacks
+            </a>.
+            I enjoy coding, solving problems, and managing products.
           </h2>
-          
+
+
           <p className="text-sm sm:text-base md:text-lg leading-relaxed mb-4 sm:mb-6 text-gray-700 dark:text-gray-300">
-            When I'm not coding, you'll find me playing sports, diving into anime and manga, gaming, or exploring nature.
+            When I'm not coding, you’ll find me playing sports, enjoying anime and manga, gaming, or exploring the outdoors.
           </p>
+
           
           <div className="flex flex-wrap gap-3 sm:gap-4 justify-center lg:justify-start">
             <motion.a
@@ -71,7 +77,7 @@ const ContactUsSection = () => {
             <div className="absolute -inset-1 bg-gradient-to-r from-indigo-600 to-purple-600 rounded-lg blur opacity-25 group-hover:opacity-75 transition duration-1000 group-hover:duration-200" />
             <div className="relative">
               <img
-                src="/images/profi2.png"
+                src="/images/profile4.png"
                 alt="Profile pic header home julian porfolio"
                 className="w-full h-auto rounded-lg transform transition duration-500 group-hover:scale-[1.02]"
               />
