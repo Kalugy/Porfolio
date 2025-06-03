@@ -17,7 +17,9 @@ import {
   FaCloud,
   FaMixcloud,
   FaJira,
-  FaTrello
+  FaTrello,
+  FaBattleNet,
+  FaConnectdevelop
 } from 'react-icons/fa';
 import {
   SiTypescript,
@@ -37,7 +39,9 @@ import {
   SiAngular,
   SiAmazondynamodb,
   SiMariadbfoundation,
-  SiScrumalliance 
+  SiScrumalliance,
+  SiSpringboot,
+  SiFirebase
 } from 'react-icons/si';
 
 const Stack = () => {
@@ -68,6 +72,8 @@ const Stack = () => {
         { name: "Express.js", icon: <SiExpress className="w-8 h-8" />, level: "Advanced" },
         { name: "PHP", icon: <FaPhp className="w-8 h-8 text-[#777BB4]" />, level: "Intermediate" },
         { name: "Laravel", icon: <FaLaravel className="w-8 h-8 text-[#FF2D20]" />, level: "Intermediate" },
+        { name: ".NET C#", icon: <FaBattleNet className="w-8 h-8 text-[#777BB4]" />, level: "Intermediate" },
+        { name: "Spring Boot", icon: <SiSpringboot className="w-8 h-8 text-[#339933]" />, level: "Beginner" },
       ]
     },
     {
@@ -93,10 +99,16 @@ const Stack = () => {
         { name: "Vercel", icon: <SiVercel className="w-8 h-8" />, level: "Advanced" },
         { name: "Netlify", icon: <SiNetlify className="w-8 h-8 text-[#00C7B7]" />, level: "Advanced" },
         { name: "Azure", icon: <FaMixcloud className="w-8 h-8 text-[#0078D4]" />, level: "Beginner" },
+        { name: "CloudFormation", icon: <FaMixcloud className="w-8 h-8 text-[#0078D4]" />, level: "Beginner" },
+        { name: "Terraform", icon: <FaMixcloud className="w-8 h-8 text-[#0078D4]" />, level: "Beginner" },
+        { name: "Jenkins", icon: <FaMixcloud className="w-8 h-8 text-[#0078D4]" />, level: "Beginner" },
+        { name: "Ansible", icon: <FaMixcloud className="w-8 h-8 text-[#0078D4]" />, level: "Beginner" },
+        { name: "Firebase", icon: <SiFirebase className="w-8 h-8 text-[#C21325]" />, level: "Beginner" },
+
       ]
     },
     {
-      title: "Testing & Tools",
+      title: "Tools & Others",
       icon: <FaTools className="w-6 h-6" />,
       color: "from-yellow-500 to-amber-600",
       items: [
@@ -104,8 +116,11 @@ const Stack = () => {
         { name: "Trello", icon: <FaTrello className="w-8 h-8 text-[#0052CC]" />, level: "Intermediate" },
         { name: "Scrum", icon: <SiScrumalliance className="w-8 h-8 text-[#0052CC]" />, level: "Advanced" },
         { name: "Kanban", icon: <SiScrumalliance className="w-8 h-8 text-[#0052CC]" />, level: "Advanced" },
-        { name: "Jest", icon: <SiJest className="w-8 h-8 text-[#C21325]" />, level: "Intermediate" },
+        { name: "Jest", icon: <SiJest className="w-8 h-8 text-[#C21325]" />, level: "Beginner" },
         { name: "Postman", icon: <SiPostman className="w-8 h-8 text-[#FF6C37]" />, level: "Advanced" },
+        { name: "Microservices", icon: <FaMixcloud className="w-8 h-8 text-[#0078D4]" />, level: "Intermediate" },
+        { name: "Monolithic", icon: <FaConnectdevelop className="w-8 h-8 text-[#0078D4]" />, level: "Intermediate" },
+        { name: "Serverless", icon: <FaConnectdevelop className="w-8 h-8 text-[#0078D4]" />, level: "Intermediate" },
       ]
     },
   ];

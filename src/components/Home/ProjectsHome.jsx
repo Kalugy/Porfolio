@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Link } from 'react-router-dom';
 
 const projects = [
@@ -6,26 +6,46 @@ const projects = [
     year: '2025',
     title: 'Growvyn',
     desc: 'A web app for self development and self growth.',
-    links: { Webstite: 'https://growvyn.com/' },
-    category: 'Web App'
+    longDesc: 'Growvyn is a comprehensive self-development platform that helps users track their personal growth journey. Features include goal setting, progress tracking, habit formation, and community support.',
+    links: { Website: 'https://growvyn.com/' },
+    category: 'Web App',
+    technologies: ['React', 'Node.js', 'Database', 'AWS'],
+    features: ['Project management', 'Task management', 'MVC', 'Founder', 'User Workflow', 'Progress Tracking', 'KPIs', 'Developer']
   },
   {
-    year: '2022',
+    year: '2024',
     title: 'Js Challenges',
     desc: 'a platform for javascript enthusiasts to test and improve their skills through daily challenges.',
-    links: { Webstite: 'https://js-challenges-flax.vercel.app/' },
-    category: 'Platform'
+    longDesc: 'A comprehensive platform for JavaScript developers to practice and improve their skills through daily coding challenges. Includes a leaderboard, solution sharing, and detailed explanations.',
+    links: { Website: 'https://js-challenges-flax.vercel.app/' },
+    category: 'Platform',
+    technologies: ['React', 'Node.js', 'Tailwind'],
+    features: ['Daily Challenges', 'Frontend', 'UI/UX', 'Progress Tracking', 'Project management', 'Task management']
   },
   {
-    year: '2022',
+    year: '2023',
     title: 'Body Puzzle',
     desc: 'A 3D puzzle game where the player must solve the puzzle by rotating the cubes.',
-    links: { Webstite: 'https://skeleton-amber.vercel.app/' },
-    category: 'Game'
+    longDesc: 'An engaging 3D puzzle game that challenges players to solve complex spatial puzzles by rotating and manipulating 3D cubes. Features multiple difficulty levels and intuitive controls.',
+    links: { Website: 'https://skeleton-amber.vercel.app/' },
+    category: 'Game',
+    technologies: ['React', 'WebGL', 'Blender', 'Unity'],
+    features: ['3D Graphics', 'Multiple Levels', 'Touch Controls', 'Progress Saving', 'UI/UX', 'Frontend']
   }
 ]
 
 export default function Projects() {
+  const [selectedProject, setSelectedProject] = useState(null);
+
+  const handleProjectClick = (e, project) => {
+    e.preventDefault();
+    setSelectedProject(project);
+  };
+
+  const closeModal = () => {
+    setSelectedProject(null);
+  };
+
   return (
     <section className="py-24 px-4 bg-gradient-to-b from-white to-gray-50 dark:from-gray-900 dark:to-gray-800" id="projects">
       <div className="max-w-7xl mx-auto">
@@ -54,10 +74,11 @@ export default function Projects() {
           {projects.map((p) => (
             <a
               key={p.title}
-              href={p.links.Webstite}
+              href={p.links.Website}
               target="_blank"
               rel="noopener noreferrer"
-              className="group relative bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 overflow-hidden"
+              onClick={(e) => handleProjectClick(e, p)}
+              className="group relative bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 overflow-hidden cursor-pointer"
             >
               <div className="absolute top-0 right-0 w-32 h-32 bg-indigo-50 dark:bg-indigo-900/20 rounded-bl-full transform translate-x-16 -translate-y-16 transition-transform duration-300 group-hover:scale-150" />
               
@@ -86,6 +107,68 @@ export default function Projects() {
           ))}
         </div>
       </div>
+
+      {/* Project Modal */}
+      {selectedProject && (
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-50">
+          <div className="bg-white dark:bg-gray-800 rounded-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto">
+            <div className="p-8">
+              <div className="flex justify-between items-start mb-6">
+                <div>
+                  <span className="text-sm font-medium text-indigo-600 dark:text-indigo-400">{selectedProject.category}</span>
+                  <h3 className="text-3xl font-bold text-gray-900 dark:text-white mt-2">{selectedProject.title}</h3>
+                </div>
+                <button
+                  onClick={closeModal}
+                  className="text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200"
+                >
+                  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                  </svg>
+                </button>
+              </div>
+
+              <p className="text-gray-600 dark:text-gray-400 mb-6 leading-relaxed">
+                {selectedProject.longDesc}
+              </p>
+
+              <div className="mb-6">
+                <h4 className="text-lg font-semibold text-gray-900 dark:text-white mb-3">Technologies Used</h4>
+                <div className="flex flex-wrap gap-2">
+                  {selectedProject.technologies.map((tech) => (
+                    <span key={tech} className="px-3 py-1 text-sm bg-indigo-100 dark:bg-indigo-900 text-indigo-700 dark:text-indigo-300 rounded-full">
+                      {tech}
+                    </span>
+                  ))}
+                </div>
+              </div>
+
+              <div className="mb-8">
+                <h4 className="text-lg font-semibold text-gray-900 dark:text-white mb-3">Key Features</h4>
+                <ul className="list-disc list-inside text-gray-600 dark:text-gray-400 space-y-2">
+                  {selectedProject.features.map((feature) => (
+                    <li key={feature}>{feature}</li>
+                  ))}
+                </ul>
+              </div>
+
+              <div className="flex justify-end">
+                <a
+                  href={selectedProject.links.Website}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center px-6 py-3 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition-all duration-300"
+                >
+                  Visit Project
+                  <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
     </section>
   )
 }

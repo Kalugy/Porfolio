@@ -50,7 +50,7 @@ const projects = [
     image: '/images/p4.PNG',
     demo: 'https://maratonapucrs.vercel.app/',
     github: 'https://github.com/Kalugy/maratonapucrs',
-    featured: true
+    featured: false
   },
   {
     title: 'FireChat',
@@ -69,7 +69,7 @@ const projects = [
     stack: ['PHP', 'Laravel', 'CSS', 'HTML', 'JavaScript'],
     image: '/images/tuvoto.PNG',
     github: 'https://github.com/Kalugy/tuvoto',
-    featured: true
+    featured: false
   },
   // Games
   {
@@ -210,7 +210,7 @@ const projects = [
 
 const categories = [
   { id: 'all', name: 'All Projects' },
-  { id: 'webapp', name: 'Web/Mobile Applications' },
+  { id: 'webapp', name: 'Web/Mobile' },
   { id: 'game', name: 'Games' },
   { id: 'art', name: 'Art & Visual Design' }
 ];
@@ -248,6 +248,9 @@ const Projects = () => {
               }`}
             >
               {category.name}
+              <span className="ml-1 text-gray-900 dark:text-gray-100 text-sm">
+                ({category.id === 'all' ? projects.length : projects.filter(project => project.category === category.id).length})
+              </span>  
             </button>
           ))}
         </div>

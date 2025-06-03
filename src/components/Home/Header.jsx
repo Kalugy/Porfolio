@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { Link } from 'react-router-dom';
 
 const ContactUsSection = () => {
   return (
@@ -19,10 +20,17 @@ const ContactUsSection = () => {
           className="text-black dark:text-white text-center lg:text-left space-y-4 sm:space-y-6 flex-1 w-full lg:w-1/2"
         >
           <div className="space-y-2">
-            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-indigo-600 to-purple-600 dark:from-indigo-400 dark:to-purple-400">
-              Hey, I'm Julian!
-            </h1>
-            <div className="h-1 w-16 sm:w-20 bg-indigo-600 dark:bg-indigo-400 rounded-full mx-auto lg:mx-0" />
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+              className="space-y-2"
+            >
+              <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-indigo-600 to-purple-600 dark:from-indigo-400 dark:to-purple-400">
+                <span className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-indigo-600 to-purple-600 dark:from-indigo-400 dark:to-purple-400 typewriter-text">Welcome, I'm Julian!</span>
+              </h1>
+              <div className="h-1 w-16 sm:w-20 bg-indigo-600 dark:bg-indigo-400 rounded-full mx-auto lg:mx-0" />
+            </motion.div>
           </div>
           
           <h2 className="text-lg sm:text-xl md:text-2xl font-medium mb-2 sm:mb-4 leading-relaxed">
@@ -33,12 +41,17 @@ const ContactUsSection = () => {
             I enjoy coding, solving problems, and managing products.
           </h2>
 
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+            className="mt-6"
+          >
+            <p className="text-sm sm:text-base md:text-lg leading-relaxed mb-4 sm:mb-6 text-gray-700 dark:text-gray-300">
+              When I'm not coding, you'll find me playing sports, enjoying anime and manga, gaming, or exploring the outdoors.
+            </p>
+          </motion.div>
 
-          <p className="text-sm sm:text-base md:text-lg leading-relaxed mb-4 sm:mb-6 text-gray-700 dark:text-gray-300">
-            When I'm not coding, you’ll find me playing sports, enjoying anime and manga, gaming, or exploring the outdoors.
-          </p>
-
-          
           <div className="flex flex-wrap gap-3 sm:gap-4 justify-center lg:justify-start">
             <motion.a
               whileHover={{ scale: 1.05 }}
@@ -85,6 +98,49 @@ const ContactUsSection = () => {
           </div>
         </motion.div>
       </div>
+
+      <style jsx>{`
+        .typewriter-text {
+          display: inline-block;
+          position: relative;
+          width: 0;
+          white-space: nowrap;
+          overflow: hidden;
+          height: 100%;
+          animation: typing 3.5s steps(24, end) forwards;
+        }
+
+        .typewriter-text::after {
+          content: '';
+          position: absolute;
+          right: 0px;
+          top: 0;
+          height: 100%;
+          width: 3px;
+          background: #4f46e5;
+          animation: blink-caret .75s step-end infinite;
+        }
+
+        @keyframes typing {
+          from { width: 0 }
+          to { width: 95% }
+        }
+
+        @keyframes blink-caret {
+          from, to { background: transparent }
+          50% { background: #4f46e5 }
+        }
+
+        @media (prefers-color-scheme: dark) {
+          .typewriter-text::after {
+            background: #818cf8;
+          }
+          @keyframes blink-caret {
+            from, to { background: transparent }
+            50% { background: #818cf8 }
+          }
+        }
+      `}</style>
     </section>
   );
 };

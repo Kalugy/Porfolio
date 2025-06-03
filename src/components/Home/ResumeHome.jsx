@@ -9,7 +9,7 @@ export default function ResumeHome() {
           <div>
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">About Me</h2>
             <p className="text-gray-600 dark:text-gray-400 text-lg">
-              A passionate Full Stack Developer with a focus on creating innovative solutions.
+              A Full Stack Developer with a focus on creating innovative solutions.
             </p>
           </div>
           <Link
@@ -34,10 +34,25 @@ export default function ResumeHome() {
                 Full Stack
               </span>
               <span className="px-3 py-1 text-sm bg-indigo-100 dark:bg-indigo-900 text-indigo-700 dark:text-indigo-300 rounded-full">
+                React
+              </span>
+              <span className="px-3 py-1 text-sm bg-indigo-100 dark:bg-indigo-900 text-indigo-700 dark:text-indigo-300 rounded-full">
+                React Native
+              </span>
+              <span className="px-3 py-1 text-sm bg-indigo-100 dark:bg-indigo-900 text-indigo-700 dark:text-indigo-300 rounded-full">
+                Node.js
+              </span>
+              <span className="px-3 py-1 text-sm bg-indigo-100 dark:bg-indigo-900 text-indigo-700 dark:text-indigo-300 rounded-full">
+                Php
+              </span>
+              <span className="px-3 py-1 text-sm bg-indigo-100 dark:bg-indigo-900 text-indigo-700 dark:text-indigo-300 rounded-full">
                 AWS
               </span>
               <span className="px-3 py-1 text-sm bg-indigo-100 dark:bg-indigo-900 text-indigo-700 dark:text-indigo-300 rounded-full">
                 DevOps
+              </span>
+              <span className="px-3 py-1 text-sm bg-indigo-100 dark:bg-indigo-900 text-indigo-700 dark:text-indigo-300 rounded-full">
+                Cloud Computing
               </span>
             </div>
           </div>
@@ -50,15 +65,30 @@ export default function ResumeHome() {
               Currently pursuing AWS certifications and expanding skills in cloud technologies.
             </p>
             <div className="flex flex-wrap gap-2">
-              <span className="px-3 py-1 text-sm bg-indigo-100 dark:bg-indigo-900 text-indigo-700 dark:text-indigo-300 rounded-full">
-                Cloud Computing
-              </span>
-              <span className="px-3 py-1 text-sm bg-indigo-100 dark:bg-indigo-900 text-indigo-700 dark:text-indigo-300 rounded-full">
-                React
-              </span>
-              <span className="px-3 py-1 text-sm bg-indigo-100 dark:bg-indigo-900 text-indigo-700 dark:text-indigo-300 rounded-full">
-                Node.js
-              </span>
+              
+              <div className="flex flex-wrap gap-2 mt-2">
+                <a href="https://www.credly.com/users/julian-trujillo.b98c47bf" target="_blank" rel="noopener noreferrer" 
+                  className="px-4 py-2 text-sm bg-indigo-600 hover:bg-indigo-700 dark:bg-indigo-800 dark:hover:bg-indigo-700 text-white rounded-lg transition-all duration-300 flex items-center gap-2 shadow-md hover:shadow-lg">
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                  Credly
+                </a>
+                <a href="https://platzi.com/p/kalugy/" target="_blank" rel="noopener noreferrer" 
+                  className="px-4 py-2 text-sm bg-indigo-600 hover:bg-indigo-700 dark:bg-indigo-800 dark:hover:bg-indigo-700 text-white rounded-lg transition-all duration-300 flex items-center gap-2 shadow-md hover:shadow-lg">
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                  Platzi
+                </a>
+                <a href="https://www.linkedin.com/in/julian-trujillo-software-developer/details/certifications/" target="_blank" rel="noopener noreferrer" 
+                  className="px-4 py-2 text-sm bg-indigo-600 hover:bg-indigo-700 dark:bg-indigo-800 dark:hover:bg-indigo-700 text-white rounded-lg transition-all duration-300 flex items-center gap-2 shadow-md hover:shadow-lg">
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                  LinkedIn Certifications
+                </a>
+              </div>
             </div>
           </div>
         </div>
