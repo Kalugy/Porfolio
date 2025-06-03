@@ -4,17 +4,15 @@ import { useNavigate } from 'react-router-dom';
 const projects = [
   // Web Applications
   {
-    id: 1,
     title: 'Growvyn',
     description: 'An innovative platform for self development! Open for Beta Testers!. Click Start on the website, and welcome to the beta program!',
     category: 'webapp',
-    stack: ['React Native', 'Javascript', 'Tailwind CSS', 'Node.js', 'Database', 'Express'],
+    stack: ['React Native', 'Javascript', 'Tailwind CSS', 'Node.js', 'Database'],
     image: '/images/growvyn.PNG',
     demo: 'https://growvyn.com',
     featured: true
   },
   {
-    id: 2,
     title: 'Daily JS Challenges',
     description: 'A platform designed for JavaScript enthusiasts to test and improve their skills through daily challenges.',
     category: 'webapp',
@@ -25,7 +23,6 @@ const projects = [
     featured: true
   },
   {
-    id: 3,
     title: 'Skeleton',
     description: 'A completed project focused on interactively learning bones.',
     category: 'webapp',
@@ -36,7 +33,6 @@ const projects = [
     featured: true
   },
   {
-    id: 4,
     title: 'PorfolioV0',
     description: 'A completed project focused on interactively learning website design.',
     category: 'webapp',
@@ -47,7 +43,6 @@ const projects = [
     featured: true
   },
   {
-    id: 5,
     title: 'Maratona de Programação',
     description: 'Short idea of how to prevent flooding in a city.',
     category: 'webapp',
@@ -58,7 +53,6 @@ const projects = [
     featured: true
   },
   {
-    id: 6,
     title: 'FireChat',
     description: 'A chat application built with Angular and Firebase.',
     category: 'webapp',
@@ -68,10 +62,26 @@ const projects = [
     github: 'https://github.com/Kalugy/ClienteServidor/tree/master/firechat',
     featured: true
   },
-
+  {
+    title: 'Tuvoto',
+    description: 'A voting application built with PHP, Laravel, CSS, HTML, and JavaScript.',
+    category: 'webapp',
+    stack: ['PHP', 'Laravel', 'CSS', 'HTML', 'JavaScript'],
+    image: '/images/tuvoto.PNG',
+    github: 'https://github.com/Kalugy/tuvoto',
+    featured: true
+  },
   // Games
   {
-    id: 7,
+    title: 'Unity Essentials',
+    description: 'A collection of Unity projects and tutorials for beginners.',
+    category: 'game',
+    stack: ['Unity', 'C#', 'Game Development'],
+    image: '/images/unityessentials.PNG',
+    demo: 'https://play.unity.com/en/games/b684c870-b78c-45ae-bc35-a014e2e729b5/webgl-builds-julian-002',
+    featured: true
+  },
+  {
     title: 'Bird vs Monster',
     description: 'Little game made in Unity featuring a bird character fighting against monsters.',
     category: 'game',
@@ -81,7 +91,6 @@ const projects = [
     featured: false
   },
   {
-    id: 8,
     title: 'Game Dungeon',
     description: 'Unity game with 5 levels featuring NPCs, enemies, bosses, money system, game save, experience points, weapon levels, and health fountains.',
     category: 'game',
@@ -91,7 +100,6 @@ const projects = [
     featured: true
   },
   {
-    id: 9,
     title: 'Rock Paper Scissors',
     description: 'Classic Rock Paper Scissors game implemented in Unity with modern UI and animations.',
     category: 'game',
@@ -101,7 +109,6 @@ const projects = [
     featured: false
   },
   {
-    id: 10,
     title: 'Memory Game',
     description: 'Unity-based memory game with random map generation and card matching mechanics.',
     category: 'game',
@@ -111,7 +118,6 @@ const projects = [
     featured: false
   },
   {
-    id: 11,
     title: 'Minesweeper',
     description: 'Classic Minesweeper game in Unity featuring random map generation, mine placement, number tiles, and win/lose conditions.',
     category: 'game',
@@ -121,7 +127,6 @@ const projects = [
     featured: false
   },
   {
-    id: 12,
     title: 'Snake Game',
     description: 'Classic Snake game implementation in Unity with modern graphics and controls.',
     category: 'game',
@@ -131,7 +136,6 @@ const projects = [
     featured: false
   },
   {
-    id: 13,
     title: 'Vocational Game',
     description: 'Unity-based game focused on career exploration and vocational guidance.',
     category: 'game',
@@ -141,7 +145,6 @@ const projects = [
     featured: false
   },
   {
-    id: 14,
     title: 'Unreal Basic Player',
     description: 'Basic player character implementation in Unreal Engine with movement and interaction mechanics.',
     category: 'game',
@@ -153,7 +156,6 @@ const projects = [
 
   // Art & Visual Design
   {
-    id: 15,
     title: 'Cubic World',
     description: 'A short video made in Blender - An adventure through cubic worlds as I delve into the realms of animation, modeling, particles, sound, and video editing in Blender.',
     category: 'art',
@@ -163,7 +165,6 @@ const projects = [
     featured: true
   },
   {
-    id: 16,
     title: 'Car Space Animation',
     description: 'A space-themed animation project created in Blender featuring a car in a cosmic environment.',
     category: 'art',
@@ -173,7 +174,6 @@ const projects = [
     featured: false
   },
   {
-    id: 17,
     title: 'Car cubic world demo Animation',
     description: 'A space-themed animation project created in Blender featuring a car in a cosmic environment.',
     category: 'art',
@@ -183,7 +183,6 @@ const projects = [
     featured: false
   },
   {
-    id: 18,
     title: 'Sawamura Drawing',
     description: 'Digital artwork created in Krita featuring Sawamura tools.',
     category: 'art',
@@ -192,7 +191,6 @@ const projects = [
     featured: false
   },
   {
-    id: 19,
     title: 'Violet Evergarden Drawing',
     description: 'Digital artwork of Violet Evergarden created in Krita.',
     category: 'art',
@@ -201,7 +199,6 @@ const projects = [
     featured: false
   },
   {
-    id: 20,
     title: 'One Piece Luffy Drawing',
     description: 'Digital artwork of Monkey D. Luffy from One Piece created in Krita.',
     category: 'art',
@@ -257,9 +254,9 @@ const Projects = () => {
 
         {/* Projects Grid */}
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-          {filteredProjects.map(project => (
+          {filteredProjects.map((project, index) => (
             <div
-              key={project.id}
+              key={index}
               className="group bg-white dark:bg-gray-800 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden"
             >
               <div className="relative h-48 overflow-hidden">

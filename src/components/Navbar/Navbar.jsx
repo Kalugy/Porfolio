@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { NavLink, useLocation } from 'react-router-dom';
 import { useTheme } from '../../context/ThemeContext';
-import { FaMoon, FaSun } from 'react-icons/fa';
+import { FaMoon, FaSun, FaGithub } from 'react-icons/fa';
 
 const Navbar = () => {
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -10,8 +10,10 @@ const Navbar = () => {
   const location = useLocation();
 
   const menuItems = [
-    { name: "Projects", href: "/projects" },
+    { name: "Home", href: "/" },
     { name: "Resume", href: "/resume" },
+    { name: "Projects", href: "/projects" },
+    { name: "Stack", href: "/stack" },
     { name: "Contact", href: "/contact" },
     // { name: "Comprar", href: "https://web.whatsapp.com/", isButton: true },
   ];
@@ -24,6 +26,13 @@ const Navbar = () => {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  };
 
   const handleMenuClick = () => {
     scrollToTop(); // Scroll to top
@@ -60,6 +69,7 @@ const Navbar = () => {
               <NavLink
                 key={item.name}
                 to={item.href}
+                onClick={handleMenuClick}
                 className={({ isActive }) => `
                   relative font-medium text-gray-700 dark:text-gray-200 hover:text-indigo-600 dark:hover:text-indigo-400 
                   transition-colors duration-200
@@ -85,6 +95,10 @@ const Navbar = () => {
                 <FaMoon className="w-5 h-5 text-gray-700" />
               )}
             </button>
+          {/* github button */}
+          <a href="https://github.com/kalugy" target="_blank" rel="noopener noreferrer">
+            <FaGithub className="w-5 h-5 dark:text-white text-gray-700" />
+          </a>
           </div>
 
           {/* Mobile Menu Button */}

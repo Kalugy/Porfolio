@@ -15,6 +15,9 @@ import {
   FaServer,
   FaTools,
   FaCloud,
+  FaMixcloud,
+  FaJira,
+  FaTrello
 } from 'react-icons/fa';
 import {
   SiTypescript,
@@ -31,6 +34,10 @@ import {
   SiFigma,
   SiAdobexd,
   SiUnity,
+  SiAngular,
+  SiAmazondynamodb,
+  SiMariadbfoundation,
+  SiScrumalliance 
 } from 'react-icons/si';
 
 const Stack = () => {
@@ -41,14 +48,15 @@ const Stack = () => {
       color: "from-blue-500 to-indigo-600",
       items: [
         { name: "React", icon: <FaReact className="w-8 h-8 text-[#61DAFB]" />, level: "Advanced" },
-        { name: "Next.js", icon: <SiNextdotjs className="w-8 h-8" />, level: "Advanced" },
-        { name: "TypeScript", icon: <SiTypescript className="w-8 h-8 text-[#3178C6]" />, level: "Intermediate" },
+        { name: "ReactNative", icon: <FaReact className="w-8 h-8 text-[#61DAFB]" />, level: "Intermediate" },
         { name: "JavaScript", icon: <FaJsSquare className="w-8 h-8 text-[#F7DF1E]" />, level: "Advanced" },
+        { name: "TypeScript", icon: <SiTypescript className="w-8 h-8 text-[#3178C6]" />, level: "Intermediate" },
         { name: "HTML5", icon: <FaHtml5 className="w-8 h-8 text-[#E34F26]" />, level: "Advanced" },
         { name: "CSS3", icon: <FaCss3Alt className="w-8 h-8 text-[#1572B6]" />, level: "Advanced" },
-        { name: "Tailwind CSS", icon: <SiTailwindcss className="w-8 h-8 text-[#06B6D4]" />, level: "Advanced" },
+        { name: "Tailwind", icon: <SiTailwindcss className="w-8 h-8 text-[#06B6D4]" />, level: "Advanced" },
         { name: "Redux", icon: <SiRedux className="w-8 h-8 text-[#764ABC]" />, level: "Intermediate" },
         { name: "Unity", icon: <SiUnity className="w-8 h-8 text-[#000000]" />, level: "Intermediate" },
+        { name: "Angular", icon: <SiAngular className="w-8 h-8 text-[#DD0031]" />, level: "Beginner" },
       ]
     },
     {
@@ -69,6 +77,9 @@ const Stack = () => {
       items: [
         { name: "MongoDB", icon: <SiMongodb className="w-8 h-8 text-[#47A248]" />, level: "Advanced" },
         { name: "MySQL", icon: <SiMysql className="w-8 h-8 text-[#4479A1]" />, level: "Intermediate" },
+        { name: "DynamoDB", icon: <SiAmazondynamodb className="w-8 h-8 text-[#47A248]" />, level: "Intermediate" },
+        { name: "MariaDB", icon: <SiMariadbfoundation className="w-8 h-8 text-[#4479A1]" />, level: "Intermediate" },
+        { name: "SQL Server", icon: <SiMysql className="w-8 h-8 text-[#4479A1]" />, level: "Intermediate" },
       ]
     },
     {
@@ -81,6 +92,7 @@ const Stack = () => {
         { name: "Git", icon: <FaGitAlt className="w-8 h-8 text-[#F05032]" />, level: "Advanced" },
         { name: "Vercel", icon: <SiVercel className="w-8 h-8" />, level: "Advanced" },
         { name: "Netlify", icon: <SiNetlify className="w-8 h-8 text-[#00C7B7]" />, level: "Advanced" },
+        { name: "Azure", icon: <FaMixcloud className="w-8 h-8 text-[#0078D4]" />, level: "Beginner" },
       ]
     },
     {
@@ -88,10 +100,12 @@ const Stack = () => {
       icon: <FaTools className="w-6 h-6" />,
       color: "from-yellow-500 to-amber-600",
       items: [
+        { name: "Jira", icon: <FaJira className="w-8 h-8 text-[#0052CC]" />, level: "Intermediate" },
+        { name: "Trello", icon: <FaTrello className="w-8 h-8 text-[#0052CC]" />, level: "Intermediate" },
+        { name: "Scrum", icon: <SiScrumalliance className="w-8 h-8 text-[#0052CC]" />, level: "Advanced" },
+        { name: "Kanban", icon: <SiScrumalliance className="w-8 h-8 text-[#0052CC]" />, level: "Advanced" },
         { name: "Jest", icon: <SiJest className="w-8 h-8 text-[#C21325]" />, level: "Intermediate" },
         { name: "Postman", icon: <SiPostman className="w-8 h-8 text-[#FF6C37]" />, level: "Advanced" },
-        { name: "Figma", icon: <SiFigma className="w-8 h-8" />, level: "Intermediate" },
-        { name: "Adobe XD", icon: <SiAdobexd className="w-8 h-8 text-[#FF61F6]" />, level: "Intermediate" },
       ]
     },
   ];
