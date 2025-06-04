@@ -99,6 +99,8 @@ const Navbar = () => {
           <a href="https://github.com/kalugy" target="_blank" rel="noopener noreferrer">
             <FaGithub className="w-5 h-5 dark:text-white text-gray-700" />
           </a>
+          
+          {/*ES y EN button */}
           </div>
 
           {/* Mobile Menu Button */}

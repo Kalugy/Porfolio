@@ -193,7 +193,21 @@ export default function Resume() {
     <div className="max-w-4xl mx-auto px-4 py-12 mt-12">
       {/* Experience Section */}
       <section className="mb-12">
-        <h2 className="text-3xl font-bold mb-6 text-gray-900 dark:text-white">Experience</h2>
+        <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-6 gap-4">
+          <h2 className="text-3xl font-bold text-gray-900 dark:text-white">Experience</h2>
+          <a
+            href="https://docs.google.com/document/d/1v5-MpvTl6dgwrpUC-Dm4zIjWEpfu1P8X/edit?usp=sharing&ouid=106420864475844446401&rtpof=true&sd=true"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center px-6 py-3 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition-all duration-300 shadow-lg font-semibold text-lg"
+          >
+            <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4v16m8-8H4" />
+            </svg>
+            Download CV
+          </a>
+        </div>
+        
         <div className="space-y-8">
           {experience.map((exp, index) => (
             <div key={index} className="border-l-4 border-indigo-500 pl-4">
