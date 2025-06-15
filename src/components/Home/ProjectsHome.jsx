@@ -10,7 +10,8 @@ const projects = [
     links: { Website: 'https://growvyn.com/' },
     category: 'Web App',
     technologies: ['React', 'Node.js', 'Database', 'AWS'],
-    features: ['Project management', 'Task management', 'MVC', 'Founder', 'User Workflow', 'Progress Tracking', 'KPIs', 'Developer']
+    features: ['Project management', 'Task management', 'MVC', 'Founder', 'User Workflow', 'Progress Tracking', 'KPIs', 'Developer'],
+    image: '/images/growvyn.PNG'
   },
   {
     year: '2024',
@@ -20,7 +21,8 @@ const projects = [
     links: { Website: 'https://js-challenges-flax.vercel.app/' },
     category: 'Platform',
     technologies: ['React', 'Node.js', 'Tailwind'],
-    features: ['Daily Challenges', 'Frontend', 'UI/UX', 'Progress Tracking', 'Project management', 'Task management']
+    features: ['Daily Challenges', 'Frontend', 'UI/UX', 'Progress Tracking', 'Project management', 'Task management'],
+    image: '/images/js.PNG'
   },
   {
     year: '2023',
@@ -30,7 +32,8 @@ const projects = [
     links: { Website: 'https://skeleton-amber.vercel.app/' },
     category: 'Game',
     technologies: ['React', 'WebGL', 'Blender', 'Unity'],
-    features: ['3D Graphics', 'Multiple Levels', 'Touch Controls', 'Progress Saving', 'UI/UX', 'Frontend']
+    features: ['3D Graphics', 'Multiple Levels', 'Touch Controls', 'Progress Saving', 'UI/UX', 'Frontend'],
+    image: '/images/bodypuzzle.PNG'
   }
 ]
 
@@ -78,11 +81,18 @@ export default function Projects() {
               target="_blank"
               rel="noopener noreferrer"
               onClick={(e) => handleProjectClick(e, p)}
-              className="group relative bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 overflow-hidden cursor-pointer"
+              className="group relative bg-white dark:bg-gray-800 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 overflow-hidden cursor-pointer"
             >
-              <div className="absolute top-0 right-0 w-32 h-32 bg-indigo-50 dark:bg-indigo-900/20 rounded-bl-full transform translate-x-16 -translate-y-16 transition-transform duration-300 group-hover:scale-150" />
+              <div className="relative h-48 overflow-hidden">
+                <img
+                  src={p.image}
+                  alt={p.title}
+                  className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              </div>
               
-              <div className="relative">
+              <div className="p-8">
                 <div className="flex items-center justify-between mb-6">
                   <span className="text-sm font-medium text-indigo-600 dark:text-indigo-400">{p.category}</span>
                   <span className="text-sm text-gray-500 dark:text-gray-400">{p.year}</span>
@@ -145,11 +155,25 @@ export default function Projects() {
 
               <div className="mb-8">
                 <h4 className="text-lg font-semibold text-gray-900 dark:text-white mb-3">Key Features</h4>
-                <ul className="list-disc list-inside text-gray-600 dark:text-gray-400 space-y-2">
+                <div className="grid grid-cols-2 gap-2">
                   {selectedProject.features.map((feature) => (
-                    <li key={feature}>{feature}</li>
+                    <div key={feature} className="flex items-center text-gray-600 dark:text-gray-400">
+                      <svg className="w-4 h-4 mr-2 text-indigo-600 dark:text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                      </svg>
+                      {feature}
+                    </div>
                   ))}
-                </ul>
+                </div>
+              </div>
+
+              <div className="relative h-48 rounded-xl overflow-hidden mb-8">
+                <img
+                  src={selectedProject.image}
+                  alt={selectedProject.title}
+                  className="w-full h-full object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
               </div>
 
               <div className="flex justify-end">

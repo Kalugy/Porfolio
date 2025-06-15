@@ -26,7 +26,7 @@ export default function ResumeHome() {
           <div className="bg-gray-50 dark:bg-gray-800 p-6 rounded-xl shadow-lg">
             <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">Experience</h3>
             <p className="text-gray-600 dark:text-gray-400 mb-4">
-              Currently working as a Freelance Software Developer, delivering custom solutions and MVPs for clients. 
+              Currently working as a Freelance Software Developer and Generation Bootcamp student, delivering custom solutions and MVPs for clients. 
               Previously worked as a Full Stack Consultant at CannedHead and Jr Software Developer at BigPass Edenred.
             </p>
             <div className="flex flex-wrap gap-2">

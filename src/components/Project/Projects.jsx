@@ -82,13 +82,13 @@ const projects = [
     featured: true
   },
   {
-    title: 'Bird vs Monster',
-    description: 'Little game made in Unity featuring a bird character fighting against monsters.',
+    title: 'The Memories Between Us',
+    description: 'Game Jam Game, Escape room and puzzle game made in Unity and a short storyline.',
     category: 'game',
     stack: ['Unity', 'C#', 'Game Development'],
-    image: '/images/birdmonster.PNG',
-    demo: 'https://www.youtube.com/watch?v=uSssNm4DRb4',
-    featured: false
+    image: '/images/thememorybtwus.PNG',
+    demo: 'https://dhako197.itch.io/the-memories-between-us',
+    featured: true
   },
   {
     title: 'Game Dungeon',
@@ -98,6 +98,15 @@ const projects = [
     image: '/images/gamedungeon.PNG',
     demo: 'https://www.youtube.com/watch?v=mDseufL1OCk&t',
     featured: true
+  },
+  {
+    title: 'Bird vs Monster',
+    description: 'Little game made in Unity featuring a bird character fighting against monsters.',
+    category: 'game',
+    stack: ['Unity', 'C#', 'Game Development'],
+    image: '/images/birdmonster.PNG',
+    demo: 'https://www.youtube.com/watch?v=uSssNm4DRb4',
+    featured: false
   },
   {
     title: 'Rock Paper Scissors',
