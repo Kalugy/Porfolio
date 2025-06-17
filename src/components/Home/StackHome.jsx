@@ -132,9 +132,11 @@ export default function StackHome() {
 
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
           {stacks.map((stack) => (
-            <div
+            <Link
               key={stack.name}
-              className="group relative bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 overflow-hidden"
+              to="/stack"
+              onClick={() => window.scrollTo(0, 0)}
+              className="group relative bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 overflow-hidden cursor-pointer"
             >
               <div className={`absolute top-0 right-0 w-32 h-32 bg-gradient-to-br ${stack.color} opacity-10 rounded-bl-full transform translate-x-16 -translate-y-16 transition-transform duration-300 group-hover:scale-150`} />
               
@@ -160,7 +162,7 @@ export default function StackHome() {
                   </svg>
                 </div>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
       </div>
