@@ -108,6 +108,16 @@ export const projects = [
     featured: true
   },
   {
+    title: 'Dummy Driver',
+    description: 'A game about driving a car and avoiding obstacles. Made in Unity.',
+    category: 'game',
+    stack: ['Unity', 'C#', 'Game Development'],
+    image: '/images/lvl1.PNG',
+    demo: 'https://kalugy.itch.io/dummydriver',
+    role: 'Game Developer, Product Manager, Tech Lead',
+    featured: true
+  },
+  {
     title: 'Bird vs Monster',
     description: 'Little game made in Unity featuring a bird character fighting against monsters.',
     category: 'game',
