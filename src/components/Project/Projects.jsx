@@ -34,9 +34,10 @@ const Projects = () => {
             My Projects
           </h2>
           <p className="text-gray-600 dark:text-gray-400 text-lg max-w-2xl mx-auto">
-          Explore my portfolio of web/mobile apps, games, and visual art—each project highlighting a mix of technical skills, design, and creativity.</p>
+          Personal projects like apps, games, and art, each combining code and design.
+          </p>
           <p className="text-gray-600 dark:text-gray-400 text-lg max-w-2xl mx-auto">
-          <strong>Main Roles:</strong> Software Developer, Product Manager, Tech Lead, Game Developer
+          <strong>Main Roles:</strong> Software Developer, Tech Lead
           </p>
         </div>
 

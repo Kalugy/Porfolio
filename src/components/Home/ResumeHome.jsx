@@ -61,9 +61,7 @@ export default function ResumeHome() {
           <div className="bg-gray-50 dark:bg-gray-800 p-6 rounded-xl shadow-lg">
             <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">Education & Skills</h3>
             <p className="text-gray-600 dark:text-gray-400 mb-4">
-              Computer Systems Engineering graduate from Universidad Tecnológica de Pereira. 
-              Currently pursuing AWS certifications and expanding skills in cloud technologies.
-            </p>
+            Computer Systems Engineering graduate from Universidad Tecnológica de Pereira, currently advancing my expertise in cloud technologies through industry-recognized certifications, while also actively exploring the field of Artificial Intelligence.            </p>
             <div className="flex flex-wrap gap-2">
               
               <div className="flex flex-wrap gap-2 mt-2">

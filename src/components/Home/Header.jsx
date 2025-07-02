@@ -4,11 +4,11 @@ import { Link } from 'react-router-dom';
 
 const ContactUsSection = () => {
   return (
-    <section className="flex items-center justify-center min-h-[calc(100vh-4rem)] py-12 sm:py-16 md:py-20 lg:py-24 px-4 sm:px-6 lg:px-8 xl:px-32 bg-gradient-to-b from-[#FFF4D6] to-white dark:from-gray-800 dark:to-gray-900 relative overflow-hidden">
+    <section className="flex items-center justify-center min-h-[calc(100vh-4rem)] py-12 sm:py-16 md:py-20 lg:py-24 px-4 sm:px-6 lg:px-8 xl:px-32 bg-gradient-to-b from-[#e4e0ff] to-white dark:from-gray-800 dark:to-gray-900 relative overflow-hidden">
       {/* Background decorative elements */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute -top-20 sm:-top-40 -right-20 sm:-right-40 w-40 sm:w-80 h-40 sm:h-80 bg-indigo-200 dark:bg-indigo-900/20 rounded-full blur-3xl opacity-50" />
-        <div className="absolute -bottom-20 sm:-bottom-40 -left-20 sm:-left-40 w-40 sm:w-80 h-40 sm:h-80 bg-yellow-200 dark:bg-yellow-900/20 rounded-full blur-3xl opacity-50" />
+        <div className="absolute -bottom-20 sm:-bottom-40 -left-20 sm:-left-40 w-40 sm:w-80 h-40 sm:h-80 bg-indigo-200 dark:bg-indigo-900/20 rounded-full blur-3xl opacity-50" />
       </div>
 
       <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-8 sm:gap-12 lg:gap-16 relative z-10">

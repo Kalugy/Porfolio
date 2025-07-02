@@ -65,6 +65,18 @@ const Navbar = () => {
 
           {/* Desktop Menu */}
           <div className="hidden md:flex items-center space-x-8">
+            {/* Theme Toggle Button */}
+            <button
+              onClick={toggleTheme}
+              className="p-2 rounded-full bg-gray-50 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors transform hover:scale-110 active:scale-95"
+              aria-label="Toggle theme"
+            >
+              {isDarkMode ? (
+                <FaSun className="w-5 h-5 text-yellow-500" />
+              ) : (
+                <FaMoon className="w-5 h-5 text-gray-700" />
+              )}
+            </button>
             {menuItems.map((item) => (
               <NavLink
                 key={item.name}
@@ -83,18 +95,7 @@ const Navbar = () => {
               </NavLink>
             ))}
             
-            {/* Theme Toggle Button */}
-            <button
-              onClick={toggleTheme}
-              className="p-2 rounded-full bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors transform hover:scale-110 active:scale-95"
-              aria-label="Toggle theme"
-            >
-              {isDarkMode ? (
-                <FaSun className="w-5 h-5 text-yellow-500" />
-              ) : (
-                <FaMoon className="w-5 h-5 text-gray-700" />
-              )}
-            </button>
+            
           {/* github button */}
           <a href="https://github.com/kalugy" target="_blank" rel="noopener noreferrer">
             <FaGithub className="w-5 h-5 dark:text-white text-gray-700" />

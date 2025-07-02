@@ -47,6 +47,16 @@ export const projects = [
     featured: true
   },
   {
+    title: 'Karaoke App',
+    description: 'A karaoke app built with React Native, featuring a user-friendly interface and a collection of popular songs.',
+    category: 'webapp',
+    stack: ['React Native', 'CSS', 'Javascript'],
+    image: '/images/karaoke.PNG',
+    demo: 'https://karaoke-app-6yld.onrender.com/',
+    role: 'Software Developer, Tech Lead, Product Owner',
+    featured: true
+  },
+  {
     title: 'Maratona de Programação',
     description: 'Short idea of how to prevent flooding in a city.',
     category: 'webapp',
@@ -179,6 +189,20 @@ export const projects = [
     image: '/images/unrealplayer.PNG',
     demo: 'https://drive.google.com/file/d/1Yp3Idu42vPg6sFb_rNsndUjJaDZZLmPo/view?usp=sharing',
     featured: false
+  },
+  {
+    title: 'Growvyn',
+    description: 'An innovative platform for self development! Open for Beta Testers!. Click Start on the website, and welcome to the beta program!',
+    longDescription: 'Growvyn is a comprehensive self-development platform designed to help users track and improve their personal growth journey. The platform includes features for goal setting, progress tracking, and community engagement.',
+    category: 'art',
+    stack: ['CSS', 'UI/UX', 'Design'],
+    image: '/images/growvyn.PNG',
+    demo: 'https://growvyn.com',
+    featured: true,
+    status: 'In Development',
+    challenges: ['Complex user workflow implementation', 'Real-time progress tracking', 'Scalable database design'],
+    achievements: ['Successfully launched beta version', 'Growing user base', 'Positive user feedback'],
+    role: 'Lead Developer & Founder'
   },
   {
     title: 'Cubic World',
