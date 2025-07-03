@@ -1,5 +1,5 @@
 import React from 'react';
-
+import Roles from './Roles';
 const experience = [
   {
     company: 'Freelance',
@@ -167,14 +167,7 @@ const certifications = [
   }
 ];
 
-const interests = [
-  'Jogging',
-  'Trekking',
-  'Walking',
-  'Gaming',
-  'Music',
-  'Anime'
-];
+
 
 const awards = [
   {
@@ -191,6 +184,7 @@ export default function Resume() {
   return (
     <section className="py-20 px-4 bg-white dark:bg-gray-900">
     <div className="max-w-4xl mx-auto px-4 py-12 mt-12">
+      <Roles />
       {/* Experience Section */}
       <section className="mb-12">
         <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-6 gap-4">
@@ -288,20 +282,6 @@ export default function Resume() {
         </div>
       </section>
 
-      {/* Interests Section */}
-      <section className="mb-12">
-        <h2 className="text-3xl font-bold mb-6 text-gray-900 dark:text-white">Interests</h2>
-        <div className="flex flex-wrap gap-2">
-          {interests.map((interest, index) => (
-            <span
-              key={index}
-              className="px-3 py-1 text-sm bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 rounded-full"
-            >
-              {interest}
-            </span>
-          ))}
-        </div>
-      </section>
 
       {/* Awards Section */}
       <section>
