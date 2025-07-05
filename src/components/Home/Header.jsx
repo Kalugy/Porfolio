@@ -27,14 +27,14 @@ const ContactUsSection = () => {
               className="space-y-2"
             >
               <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-indigo-600 to-purple-600 dark:from-indigo-400 dark:to-purple-400">
-                Welcome, I'm Julian!
+                Hey, I'm Julian!
               </h1>
               <div className="h-1 w-16 sm:w-20 bg-indigo-600 dark:bg-indigo-400 rounded-full mx-auto lg:mx-0" />
             </motion.div>
           </div>
           
           <h2 className="text-lg sm:text-xl md:text-2xl font-medium mb-2 sm:mb-4 leading-relaxed">
-            Focused on building digital products. I've worked on websites, games, and full stack projects as a developer across different{' '}
+            I'm a software developer with experience in both front-end and full-stack development, I've worked with various{' '}
             <a href="#stack" className="text-indigo-600 dark:text-indigo-400 hover:underline font-semibold">
               stacks
             </a>.
@@ -90,7 +90,7 @@ const ContactUsSection = () => {
             <div className="absolute -inset-1 bg-gradient-to-r from-indigo-600 to-purple-600 rounded-lg blur opacity-25 group-hover:opacity-75 transition duration-1000 group-hover:duration-200" />
             <div className="relative">
               <img
-                src="/images/profile4.png"
+                src="/images/face.png"
                 alt="Profile pic header home julian porfolio"
                 className="w-full h-auto rounded-lg transform transition duration-500 group-hover:scale-[1.02]"
               />
