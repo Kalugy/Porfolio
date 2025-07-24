@@ -37,18 +37,6 @@ const longTermRoles = [
     description: 'Leading technology strategy and driving business innovation as a technical leader'
   },
   {
-    title: 'Unity Technical Lead or Gameplay Director',
-    duration: '3-5 years',
-    focus: 'Game Development Leadership, Technical Direction',
-    description: 'Leading Unity development teams and directing gameplay innovation'
-  },
-  {
-    title: 'Product Architect or Solutions Architect',
-    duration: '5+ years',
-    focus: 'System Design, Product Strategy, Technical Solutions',
-    description: 'Designing comprehensive product architectures and technical solutions'
-  },
-  {
     title: 'Innovation or R&D Lead',
     duration: '5+ years',
     focus: 'AI, Education, Creative Tech, Research',
