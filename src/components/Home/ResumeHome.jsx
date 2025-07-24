@@ -26,7 +26,7 @@ export default function ResumeHome() {
           <div className="bg-gray-50 dark:bg-gray-800 p-6 rounded-xl shadow-lg">
             <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">Experience</h3>
             <p className="text-gray-600 dark:text-gray-400 mb-4">
-              Currently working as a Freelance Software Developer and Generation Bootcamp student, delivering custom solutions and MVPs for clients. 
+              Currently working as a Freelance Software Developer, delivering custom solutions and MVPs for clients. 
               Previously worked as a Full Stack Consultant at CannedHead and Jr Software Developer at BigPass Edenred.
             </p>
             <div className="flex flex-wrap gap-2">
@@ -63,7 +63,6 @@ export default function ResumeHome() {
             <p className="text-gray-600 dark:text-gray-400 mb-4">
             Computer Systems Engineering graduate from Universidad Tecnológica de Pereira, currently advancing my expertise in cloud technologies through industry-recognized certifications, while also actively exploring the field of Artificial Intelligence.            </p>
             <div className="flex flex-wrap gap-2">
-              
               <div className="flex flex-wrap gap-2 mt-2">
                 <a href="https://www.credly.com/users/julian-trujillo.b98c47bf" target="_blank" rel="noopener noreferrer" 
                   className="px-4 py-2 text-sm bg-indigo-600 hover:bg-indigo-700 dark:bg-indigo-800 dark:hover:bg-indigo-700 text-white rounded-lg transition-all duration-300 flex items-center gap-2 shadow-md hover:shadow-lg">

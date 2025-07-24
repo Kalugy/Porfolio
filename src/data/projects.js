@@ -87,6 +87,18 @@ export const projects = [
   },
   // Games
   {
+    title: 'Elara',
+    description: 'Game Jam Game, Shooter, horror, cinematic 3D, Unity.',
+    category: 'game',
+    stack: ['Unity', 'C#', 'Game Development'],
+    image: '/images/elera.jpg',
+    demo: 'https://wilsongarcia.itch.io/elara',
+    challenges: ['Game Jam', 'Shooter', '3D', 'Horror', 'Cinematic', 'Unity'],
+    achievements: ['Game Jam Game', 'Mvp', 'Create mechanics', 'Teamwork', 'Unity'],
+    role: 'Product Manager, Game Developer',
+    featured: true
+  },
+  {
     title: 'Unity Essentials',
     description: 'A collection of Unity projects and tutorials for beginners.',
     category: 'game',
