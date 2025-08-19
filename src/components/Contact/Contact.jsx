@@ -18,6 +18,12 @@ const socialLinks = [
     url: 'https://www.linkedin.com/in/julian-trujillo-92b0b8143/',
     icon: 'https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white',
     color: 'hover:bg-blue-600'
+  },
+  {
+    name: 'Freelancer.com',
+    url: 'https://www.freelancer.com/u/juliant36',
+    icon: 'https://img.shields.io/badge/Freelancer-000000?style=for-the-badge&logo=freelancer&logoColor=white',
+    color: 'hover:bg-black'
   }
 ];
 

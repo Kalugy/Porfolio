@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import Roles from './Roles';
 const experience = [
   {
@@ -189,17 +190,15 @@ export default function Resume() {
       <section className="mb-12">
         <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-6 gap-4">
           <h2 className="text-3xl font-bold text-gray-900 dark:text-white">Experience</h2>
-          <a
-            href="https://docs.google.com/document/d/1v5-MpvTl6dgwrpUC-Dm4zIjWEpfu1P8X/edit?usp=sharing&ouid=106420864475844446401&rtpof=true&sd=true"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center px-6 py-3 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition-all duration-300 shadow-lg font-semibold text-lg"
-          >
-            <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4v16m8-8H4" />
-            </svg>
-            Download CV
-          </a>
+          <Link
+             to="/contact"
+             className="inline-flex items-center px-6 py-3 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition-all duration-300 shadow-lg font-semibold text-lg"
+           >
+             <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4v16m8-8H4" />
+             </svg>
+             Contact me
+           </Link>
         </div>
         
         <div className="space-y-8">
