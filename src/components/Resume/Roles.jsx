@@ -2,7 +2,7 @@ import React from 'react';
 
 const shortTermRoles = [
   {
-    title: 'Frontend or Full-Stack Developer',
+    title: 'Frontend & Full-Stack Software Engineer | AI Development',
     duration: '0-2 years',
     focus: 'JavaScript, Node.js, React, React Native',
     description: 'Building scalable web applications with modern frontend and backend technologies'
@@ -15,10 +15,10 @@ const shortTermRoles = [
     description: 'Coordinating projects while maintaining hands-on coding responsibilities'
   },
   {
-    title: 'Unity Developer',
+    title: 'Support Engineer, QA Engineer',
     duration: '0-2 years',
-    focus: 'Unity, C#, Prototyping, Gameplay Systems',
-    description: 'Open for this role in case the industry has vacancies, Creating prototypes, gameplay systems, and development tools with Unity engine'
+    focus: 'Technical Support, Troubleshooting, Software Development',
+    description: 'Providing technical support to clients, Troubleshooting and Software Development, Testing and Quality Assurance'
   },
 ];
 

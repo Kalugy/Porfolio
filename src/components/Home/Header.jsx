@@ -34,11 +34,11 @@ const ContactUsSection = () => {
           </div>
           
           <h2 className="text-lg sm:text-xl md:text-2xl font-medium mb-2 sm:mb-4 leading-relaxed">
-            I'm a software developer with experience in both front-end and full-stack development, I've worked with various{' '}
+            I'm a developer with experience in both front-end and full-stack development, I've worked with various{' '}
             <a href="#stack" className="text-indigo-600 dark:text-indigo-400 hover:underline font-semibold">
               stacks
             </a>.
-            I enjoy coding, solving problems, and managing products.
+            I enjoy coding, troubleshooting, solving problems, and managing products.
           </h2>
 
           <motion.div

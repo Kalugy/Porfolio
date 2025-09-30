@@ -26,15 +26,18 @@ export default function ResumeHome() {
           <div className="bg-gray-50 dark:bg-gray-800 p-6 rounded-xl shadow-lg">
             <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">Experience</h3>
             <p className="text-gray-600 dark:text-gray-400 mb-4">
-              Currently working as a Freelance Software Developer, delivering custom solutions and MVPs for clients. 
-              Previously worked as a Full Stack Consultant at CannedHead and Jr Software Developer at BigPass Edenred.
+              Currently working as a Support Technical Specialist at Elliot System, providing technical support to clients for replit company. 
+              Previously worked as a freelance Software Developer, Full Stack Consultant at CannedHead and Jr Software Developer at BigPass Edenred.
             </p>
             <div className="flex flex-wrap gap-2">
               <span className="px-3 py-1 text-sm bg-indigo-100 dark:bg-indigo-900 text-indigo-700 dark:text-indigo-300 rounded-full">
                 Founder
               </span>
               <span className="px-3 py-1 text-sm bg-indigo-100 dark:bg-indigo-900 text-indigo-700 dark:text-indigo-300 rounded-full">
-                Full Stack
+                Troubleshooting
+              </span>
+              <span className="px-3 py-1 text-sm bg-indigo-100 dark:bg-indigo-900 text-indigo-700 dark:text-indigo-300 rounded-full">
+                Software Development
               </span>
               <span className="px-3 py-1 text-sm bg-indigo-100 dark:bg-indigo-900 text-indigo-700 dark:text-indigo-300 rounded-full">
                 React

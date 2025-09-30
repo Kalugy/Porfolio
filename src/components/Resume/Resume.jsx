@@ -3,6 +3,20 @@ import { Link } from 'react-router-dom';
 import Roles from './Roles';
 const experience = [
   {
+    company: 'Elliot Systems',
+    location: 'Remote',
+    role: 'Support Technical Specialist',
+    tasks: [
+      'Provide technical support to clients for replit company',
+      'Troubleshoot and resolve technical issues',
+      'Maintain and update software and hardware',
+      'Provide training and documentation to clients',
+      'Collaborate with the development team to implement new features and improvements'
+    ],
+    date: '2025-2026',
+    isActive: true
+  },
+  {
     company: 'Freelance',
     location: 'Remote',
     role: 'Software Developer',
@@ -14,7 +28,7 @@ const experience = [
       'Creating own personal projects to idea into a full application on market'
     ],
     date: '2024',
-    isActive: true
+    isActive: false
   },
   {
     company: 'CannedHead',
@@ -191,6 +205,7 @@ export default function Resume() {
         <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-6 gap-4">
           <h2 className="text-3xl font-bold text-gray-900 dark:text-white">Experience</h2>
           <Link
+             onClick={() => window.scrollTo(0, 0)}
              to="/contact"
              className="inline-flex items-center px-6 py-3 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition-all duration-300 shadow-lg font-semibold text-lg"
            >
