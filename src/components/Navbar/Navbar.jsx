@@ -14,6 +14,7 @@ const Navbar = () => {
     { name: "About Me", href: "/resume" },
     { name: "Projects", href: "/projects" },
     { name: "Stack", href: "/stack" },
+    { name: "Blog", href: "/blog" },
     { name: "Contact", href: "/contact" },
     // { name: "Comprar", href: "https://web.whatsapp.com/", isButton: true },
   ];
