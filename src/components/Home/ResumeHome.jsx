@@ -1,9 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import Rain from '../Rain/Rain';
 
 export default function ResumeHome() {
   return (
-    <section className="py-20 px-4 bg-white dark:bg-gray-900" id="about">
+    <section className="py-20 px-4 bg-white dark:bg-gray-900 relative" id="about">
+      <Rain intensity={30} speed="slow" opacity={0.4} />
       <div className="max-w-6xl mx-auto">
         <div className="flex items-center justify-between mb-12">
           <div>

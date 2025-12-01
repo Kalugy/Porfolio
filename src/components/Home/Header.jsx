@@ -1,10 +1,14 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { Link } from 'react-router-dom';
+import Rain from '../Rain/Rain';
 
 const ContactUsSection = () => {
   return (
     <section className="flex items-center justify-center min-h-[calc(100vh-4rem)] py-12 sm:py-16 md:py-20 lg:py-24 px-4 sm:px-6 lg:px-8 xl:px-32 bg-gradient-to-b from-[#e4e0ff] to-white dark:from-gray-800 dark:to-gray-900 relative overflow-hidden">
+      {/* Rain Animation */}
+      <Rain intensity={50} speed="normal" opacity={0.6} />
+
       {/* Background decorative elements */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute -top-20 sm:-top-40 -right-20 sm:-right-40 w-40 sm:w-80 h-40 sm:h-80 bg-indigo-200 dark:bg-indigo-900/20 rounded-full blur-3xl opacity-50" />

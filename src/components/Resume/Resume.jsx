@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import Roles from './Roles';
+import Rain from '../Rain/Rain';
 const experience = [
   {
     company: 'Elliot Systems',
@@ -197,7 +198,8 @@ const awards = [
 
 export default function Resume() {
   return (
-    <section className="py-20 px-4 bg-white dark:bg-gray-900">
+    <section className="py-20 px-4 bg-white dark:bg-gray-900 relative">
+      <Rain intensity={30} speed="slow" opacity={0.4} />
     <div className="max-w-4xl mx-auto px-4 py-12 mt-12">
       <Roles />
       {/* Experience Section */}
