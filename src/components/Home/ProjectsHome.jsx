@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom';
+import Rain from '../Rain/Rain';
 
 const projects = [
   {
@@ -50,7 +51,8 @@ export default function Projects() {
   };
 
   return (
-    <section className="py-24 px-4 bg-gradient-to-b from-white to-gray-50 dark:from-gray-900 dark:to-gray-800" id="projects">
+    <section className="relative overflow-hidden py-24 px-4 bg-gradient-to-b from-white to-gray-50 dark:from-gray-900 dark:to-gray-800" id="projects">
+      <Rain />
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-col md:flex-row items-start md:items-center justify-between mb-16">
           <div className="mb-8 md:mb-0">

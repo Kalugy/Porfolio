@@ -23,6 +23,7 @@ import {
   SiChai,
   SiAmazoncloudwatch,
 } from 'react-icons/si';
+import Rain from '../Rain/Rain';
 
 const techGroups = [
   {
@@ -107,7 +108,8 @@ const stacks = [
 
 export default function StackHome() {
   return (
-    <section className="py-24 px-4 bg-gradient-to-b from-gray-50 to-white dark:from-gray-800 dark:to-gray-900" id="stack">
+    <section className="relative overflow-hidden py-24 px-4 bg-gradient-to-b from-gray-50 to-white dark:from-gray-900 dark:to-gray-900" id="stack">
+      <Rain />
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-col md:flex-row items-start md:items-center justify-between mb-16">
           <div className="mb-8 md:mb-0">
