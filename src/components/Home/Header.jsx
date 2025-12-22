@@ -6,8 +6,8 @@ import Rain from '../Rain/Rain';
 const ContactUsSection = () => {
   return (
     <section className="flex items-center justify-center min-h-[calc(100vh-4rem)] py-12 sm:py-16 md:py-20 lg:py-24 px-4 sm:px-6 lg:px-8 xl:px-32 bg-gradient-to-b from-[#e4e0ff] to-white dark:from-gray-800 dark:to-gray-900 relative overflow-hidden">
-      {/* Rain Animation */}
-      <Rain intensity={50} speed="normal" opacity={0.6} />
+      {/* Rain Animation with Sun and Stars */}
+      <Rain intensity={50} speed="normal" opacity={0.6} includeSun includeStars />
 
       {/* Background decorative elements */}
       <div className="absolute inset-0 overflow-hidden">
@@ -23,19 +23,16 @@ const ContactUsSection = () => {
           transition={{ duration: 0.8 }}
           className="text-black dark:text-white text-center lg:text-left space-y-4 sm:space-y-6 flex-1 w-full lg:w-1/2"
         >
-          <div className="space-y-2">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5 }}
-              className="space-y-2"
-            >
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            className="space-y-2"
+          >
               <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-indigo-600 to-purple-600 dark:from-indigo-400 dark:to-purple-400">
                 Hey, I'm Julian!
               </h1>
-              <div className="h-1 w-16 sm:w-20 bg-indigo-600 dark:bg-indigo-400 rounded-full mx-auto lg:mx-0" />
-            </motion.div>
-          </div>
+          </motion.div>
           
           <h2 className="text-lg sm:text-xl md:text-2xl font-medium mb-2 sm:mb-4 leading-relaxed">
             I'm a developer with experience in both front-end and full-stack development, I've worked with various{' '}
