@@ -26,6 +26,58 @@ export const projects = [
     featured: true
   },
   {
+    title: 'Sound Mixer',
+    description: 'Create simple music loops by mixing basic sounds in real time.',
+    category: 'webapp',
+    stack: ['JavaScript', 'HTML', 'CSS'],
+    image: '/images/soundmixer.jfif',
+    github: 'https://github.com/Kalugy/SoundMixer',
+    demo: 'https://sound-mixer-rho.vercel.app/',
+    role: 'Software Developer',
+    featured: false
+  },
+  {
+    title: 'Rain Simulator',
+    description: 'A cozy “open window” experience with rain animation and ambient sound.',
+    category: 'webapp',
+    stack: ['JavaScript', 'HTML', 'CSS'],
+    image: '/images/raini.jfif',
+    github: 'https://github.com/Kalugy/RainyElements',
+    demo: 'https://rainy-elements.vercel.app/',
+    role: 'Software Developer',
+    featured: false
+  },
+  {
+    title: 'Story Generator',
+    description: 'Create stories by clicking images or letting AI generate them, great for learning or sparking creativity.',
+    category: 'webapp',
+    stack: ['JavaScript', 'HTML', 'CSS', 'AI'],
+    image: '/images/story.jfif',
+    demo: 'https://story-weaver-seven.vercel.app/',
+    role: 'Software Developer',
+    featured: false
+  },
+  {
+    title: 'Pizza Delivery Mini-Game',
+    description: 'Carry a pizza from point A to B before time runs out. If you’re late, you lose!',
+    category: 'game',
+    stack: ['JavaScript', 'HTML', 'CSS'],
+    image: '/images/pizza.jfif',
+    demo: 'https://pizza-verse-six.vercel.app/',
+    role: 'Game Developer',
+    featured: false
+  },
+  {
+    title: 'Learning Path Builder',
+    description: 'Create your own learning paths step-by-step, personalized to any topic.',
+    category: 'webapp',
+    stack: ['JavaScript', 'HTML', 'CSS'],
+    image: '/images/nodespatterns.jfif',
+    demo: 'https://plan-tree-nodes.vercel.app/',
+    role: 'Software Developer, Product Designer',
+    featured: false
+  },
+  {
     title: 'Skeleton',
     description: 'A completed project focused on interactively learning bones.',
     category: 'webapp',
