@@ -11,7 +11,7 @@ export default function ResumeHome() {
           <div>
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">About Me</h2>
             <p className="text-gray-600 dark:text-gray-400 text-lg">
-              A Developer with a focus on creating innovative solutions, Currently working as a Support Technical Specialist at Elliot System, providing technical support to clients for replit company.
+              I'm a software developer with experience in building web and mobile applications, and I'm passionate about learning new technologies and creating solutions.
             </p>
           </div>
           <Link

@@ -1,6 +1,7 @@
 import blog1Content from './blogs/blog1.md?raw';
 import expoAppGuideContent from './blogs/blog2.md?raw';
 import growvynContent from './blogs/blog3.md?raw';
+import blog4Content from './blogs/blog4.md?raw';
 
 export const blogCategories = [
   { id: 'all', name: 'All Posts' },
@@ -14,13 +15,43 @@ export const blogCategories = [
 
 export const blogs = [
   {
+    id: 4,
+    title: 'Upload to Play Store from Replit (Expo EAS Build Tutorial)',
+    excerpt: 'Learn how to build and publish your Expo app (APK & AAB) to the Google Play Store directly from Replit using EAS.',
+    content: blog4Content,
+    author: 'Julian',
+    date: '2026-05-05',
+    category: blogCategories[3].id,
+    tags: ['Expo', 'Replit', 'Play Store', 'Tutorial'],
+    image: '/images/expoblog.png',
+    featured: false,
+    popular: false,
+    readTime: '15 min read',
+    views: 15
+  },
+   {
+    id: 3,
+    title: 'How Growvyn Helps You Become the Best Version of Yourself',
+    excerpt: 'Growvyn is a comprehensive self-development platform designed to help users track and improve their personal growth journey. The platform includes features for goal setting, progress tracking, and community engagement.',
+    content: growvynContent,
+    author: 'Julian',
+    date: '2025-12-10',
+    category: blogCategories[4].id,
+    tags: ['Growvyn', 'Self Development', 'Personal Growth'],
+    image: '/images/growvyn.PNG',
+    featured: true,
+    popular: true,
+    readTime: '5 min read',
+    views: 250
+  },
+  {
     id: 1,
     title: 'Building Scalable React Applications: Best Practices and Patterns',
     excerpt: 'Learn how to structure your React applications for scalability, maintainability, and performance. This comprehensive guide covers component architecture, state management, and modern React patterns.',
     content: blog1Content,
     author: 'Julian',
     date: '2025-12-10',
-    category: blogCategories[0].name,
+    category: blogCategories[1].id,
     tags: ['React', 'JavaScript', 'Frontend', 'Best Practices'],
     image: '/images/js.PNG',
     readTime: '8 min read',
@@ -33,7 +64,7 @@ export const blogs = [
     content: expoAppGuideContent,
     author: 'Julian',
     date: '2025-12-10',
-    category: blogCategories[1].name,
+    category: blogCategories[3].id,
     tags: ['Expo', 'React Native', 'Mobile Apps', 'Play Store'],
     image: '/images/expoblog.png',
     featured: false,
@@ -41,22 +72,7 @@ export const blogs = [
     readTime: '6 min read',
     views: 100
   },
-  {
-    id: 3,
-    title: 'How Growvyn Helps You Become the Best Version of Yourself',
-    excerpt: 'Growvyn is a comprehensive self-development platform designed to help users track and improve their personal growth journey. The platform includes features for goal setting, progress tracking, and community engagement.',
-    content: growvynContent,
-    author: 'Julian',
-    date: '2025-12-10',
-    category: blogCategories[2].name,
-    tags: ['Growvyn', 'Self Development', 'Personal Growth'],
-    image: '/images/growvyn.PNG',
-    featured: true,
-    popular: true,
-    readTime: '5 min read',
-    views: 250
-  }
-  
+ 
 ];
 
 
