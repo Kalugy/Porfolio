@@ -4,6 +4,20 @@ import Roles from './Roles';
 import Rain from '../Rain/Rain';
 const experience = [
   {
+    company: 'Replit',
+    location: 'Remote',
+    role: 'Support Technical Specialist',
+    tasks: [
+      'Provide technical support to clients for replit company',
+      'Troubleshoot and resolve technical issues',
+      'Maintain and update software and hardware',
+      'Provide training and documentation to clients',
+      'Collaborate with the development team to implement new features and improvements'
+    ],
+    date: '2025-2026',
+    isActive: true
+  },
+  {
     company: 'Elliot Systems',
     location: 'Remote',
     role: 'Support Technical Specialist',
@@ -90,6 +104,23 @@ const education = [
 ];
 
 const certifications = [
+  {
+    title: 'Replit Platform Builder - Level 4 Advanced Builder',
+    platform: 'Replit',
+    date: 'March 2026'
+  },
+  {
+    title: 'Claude Code 101',
+    platform: 'Anthropic',
+    date: 'April 2026',
+    credentialId: 'h75rvcqstbng'
+  },
+  {
+    title: 'Claude 101',
+    platform: 'Anthropic',
+    date: 'April 2026',
+    credentialId: 't3xjjjxq57sr'
+  },
   {
     title: 'Unity Essential',
     platform: 'Unity',

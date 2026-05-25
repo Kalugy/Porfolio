@@ -26,6 +26,16 @@ export const projects = [
     featured: true
   },
   {
+    title: 'Rockvyn',
+    description: 'A music-based app that allows users to explore, experience, and interact with sound-driven content in a modern and immersive interface. Available on the App Store.',
+    category: 'mobileapp',
+    stack: ['React Native','expo', 'JavaScript', 'Expo'],
+    image: '/images/rockvyn.PNG',
+    demo: 'https://rockvyn.julianprojects.com/',
+    role: 'Software Developer',
+    featured: true
+  },
+  {
     title: 'Sound Mixer',
     description: 'Create simple music loops by mixing basic sounds in real time.',
     category: 'webapp',
