@@ -55,7 +55,7 @@ export default function ContactHome() {
               danieltrujillo902@gmail.com
             </a>
             <p className="text-gray-600 dark:text-gray-400">
-              Available for freelance opportunities and full-time positions.
+              Feel free to contact me for any questions or opportunities.
             </p>
           </div>
 
@@ -88,7 +88,7 @@ export default function ContactHome() {
             <div>
               <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mb-2">Freelance Available</h3>
               <p className="text-gray-600 dark:text-gray-400">
-                Currently accepting new projects and opportunities.
+              Got a question or an opportunity in mind? Feel free to reach out anytime!
               </p>
             </div>
             <a
