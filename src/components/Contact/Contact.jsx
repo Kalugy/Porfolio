@@ -24,6 +24,12 @@ const socialLinks = [
     url: 'https://www.freelancer.com/u/juliant36',
     icon: 'https://img.shields.io/badge/Freelancer-000000?style=for-the-badge&logo=freelancer&logoColor=white',
     color: 'hover:bg-black'
+  },
+  {
+    name: 'Ko-fi',
+    url: 'https://ko-fi.com/kalugy',
+    icon: 'https://img.shields.io/badge/Ko--fi-FF5E5B?style=for-the-badge&logo=ko-fi&logoColor=white',
+    color: 'hover:bg-red-400'
   }
 ];
 
@@ -117,14 +123,22 @@ export default function Contact() {
           </div>
         </div>
 
-        {/* Future Donations Section (Placeholder) */}
-        <div className="mt-12 text-center">
-          <p className="text-gray-600 dark:text-gray-400">
-            Support my work and future projects
+        {/* Donate via Ko-fi */}
+        <div className="mt-12 text-center bg-gray-50 dark:bg-gray-800 p-8 rounded-xl shadow-lg">
+          <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mb-3">
+            Support My Work
+          </h3>
+          <p className="text-gray-600 dark:text-gray-400 mb-6 max-w-xl mx-auto">
+            If you enjoy what I do, consider buying me a coffee on Ko-fi. Every bit of support helps fuel future projects!
           </p>
-          <p className="text-sm text-gray-500 dark:text-gray-500 mt-2">
-            Donation links coming soon...
-          </p>
+          <a
+            href="https://ko-fi.com/kalugy"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 px-6 py-3 bg-[#FF5E5B] text-white rounded-lg hover:bg-[#e54e4b] transition-colors duration-300 font-medium"
+          >
+            Donate on Ko-fi
+          </a>
         </div>
       </div>
     </section>

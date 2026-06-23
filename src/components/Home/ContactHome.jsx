@@ -21,6 +21,11 @@ const socialLinks = [
     name: 'Freelancer.com',
     url: 'https://www.freelancer.com/u/juliant36',
     icon: 'https://img.shields.io/badge/Freelancer-000000?style=for-the-badge&logo=freelancer&logoColor=white',
+  },
+  {
+    name: 'Ko-fi',
+    url: 'https://ko-fi.com/kalugy',
+    icon: 'https://img.shields.io/badge/Ko--fi-FF5E5B?style=for-the-badge&logo=ko-fi&logoColor=white',
   }
 ];
 
@@ -84,20 +89,40 @@ export default function ContactHome() {
 
         {/* Freelance Availability */}
         <div className="mt-8 bg-gray-50 dark:bg-gray-800 p-6 rounded-xl shadow-lg">
-          <div className="flex items-center justify-between">
+          <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
             <div>
               <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mb-2">Freelance Available</h3>
               <p className="text-gray-600 dark:text-gray-400">
-              Got a question or an opportunity in mind? Feel free to reach out anytime!
+                Got a question or an opportunity in mind? Feel free to reach out anytime!
               </p>
             </div>
             <a
               href="https://www.freelancer.com/u/juliant36"
               target="_blank"
               rel="noopener noreferrer"
-              className="px-6 py-3 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition-colors duration-300"
+              className="px-6 py-3 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition-colors duration-300 text-center font-medium shrink-0"
             >
               Hire Me
+            </a>
+          </div>
+        </div>
+
+        {/* Donate */}
+        <div className="mt-8 bg-gray-50 dark:bg-gray-800 p-6 rounded-xl shadow-lg">
+          <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+            <div>
+              <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mb-2">Support My Work</h3>
+              <p className="text-gray-600 dark:text-gray-400">
+                Enjoy my projects? Buy me a coffee on Ko-fi — it helps keep new ideas coming.
+              </p>
+            </div>
+            <a
+              href="https://ko-fi.com/kalugy"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-6 py-3 bg-[#FF5E5B] text-white rounded-lg hover:bg-[#e54e4b] transition-colors duration-300 text-center font-medium shrink-0"
+            >
+              Donate on Ko-fi
             </a>
           </div>
         </div>
