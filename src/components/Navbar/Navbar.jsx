@@ -1,12 +1,15 @@
 import React, { useState, useEffect } from "react";
 import { NavLink, useLocation } from 'react-router-dom';
 import { useTheme } from '../../context/ThemeContext';
+import { useCinemaMode } from '../../context/CinemaModeContext';
 import { FaMoon, FaSun, FaGithub } from 'react-icons/fa';
+import { SiReplit } from 'react-icons/si';
 
 const Navbar = () => {
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const { isDarkMode, toggleTheme } = useTheme();
+  const { isCinemaMode } = useCinemaMode();
   const location = useLocation();
 
   const menuItems = [
@@ -42,8 +45,10 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
-        isScrolled 
+      className={`fixed top-0 left-0 w-full z-50 transition-all duration-500 ${
+        isCinemaMode
+          ? 'opacity-0 -translate-y-full pointer-events-none'
+          : isScrolled 
           ? 'bg-white/80 dark:bg-gray-900/80 backdrop-blur-md shadow-lg' 
           : 'bg-transparent'
       }`}
@@ -53,15 +58,19 @@ const Navbar = () => {
           {/* Logo */}
           <NavLink 
             to="/" 
-            className="flex items-center space-x-2 group"
+            className="flex items-center gap-2.5 group"
             onClick={handleMenuClick}
           >
-            <div className="flex items-center transform transition-transform duration-200 hover:scale-105">
-              <img src="/images/logo.png" alt="Logo" className="h-10 w-auto" />
-              <h1 className="text-lg sm:text-xl font-bold ml-2 bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">
-                Julian's Portfolio
-              </h1>
-            </div>
+            <span className="relative h-9 w-9 shrink-0 overflow-hidden rounded-full">
+              <img
+                src="/images/logo.png"
+                alt="Logo"
+                className="absolute inset-0 h-full w-full scale-110 object-cover object-[36%_50%] transform transition-transform duration-200 group-hover:scale-125"
+              />
+            </span>
+            <span className="text-lg sm:text-xl font-bold leading-none bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">
+              Julian's Portfolio
+            </span>
           </NavLink>
 
           {/* Desktop Menu */}
@@ -97,10 +106,26 @@ const Navbar = () => {
             ))}
             
             
-          {/* github button */}
-          <a href="https://github.com/kalugy" target="_blank" rel="noopener noreferrer">
-            <FaGithub className="w-5 h-5 dark:text-white text-gray-700" />
-          </a>
+          <div className="flex items-center gap-4">
+            <a
+              href="https://github.com/kalugy"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="GitHub"
+              className="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors"
+            >
+              <FaGithub className="w-5 h-5 dark:text-white text-gray-700" />
+            </a>
+            <a
+              href="https://community-hub.replit.app/profile/jtreplitsupport"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Replit"
+              className="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors"
+            >
+              <SiReplit className="w-5 h-5 dark:text-white text-gray-700" />
+            </a>
+          </div>
           
           {/*ES y EN button */}
           </div>
@@ -145,6 +170,27 @@ const Navbar = () => {
             </NavLink>
           ))}
           
+          <div className="flex items-center gap-4 px-4 py-2">
+            <a
+              href="https://github.com/kalugy"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="GitHub"
+              className="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors"
+            >
+              <FaGithub className="w-5 h-5 dark:text-white text-gray-700" />
+            </a>
+            <a
+              href="https://community-hub.replit.app/profile/jtreplitsupport"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Replit"
+              className="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors"
+            >
+              <SiReplit className="w-5 h-5 dark:text-white text-gray-700" />
+            </a>
+          </div>
+
           {/* Theme Toggle for Mobile */}
           <button
             onClick={toggleTheme}

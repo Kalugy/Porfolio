@@ -1,11 +1,15 @@
 import React from 'react';
 import { FaInstagram, FaLinkedin, FaYoutube } from 'react-icons/fa';
-
 import { Link } from 'react-router-dom';
+import { useCinemaMode } from '../context/CinemaModeContext';
 
 export default function Footer() {
+  const { isCinemaMode } = useCinemaMode();
+
   return (
-    <footer className="bg-white dark:bg-gray-900 text-gray-900 dark:bg-gray-800">
+    <footer className={`bg-white dark:bg-gray-900 text-gray-900 dark:bg-gray-800 transition-all duration-500 ${
+      isCinemaMode ? 'opacity-0 pointer-events-none h-0 overflow-hidden py-0' : ''
+    }`}>
       <div className="max-w-7xl mx-auto py-8 px-4 flex flex-col md:flex-row items-center justify-between">
         {/* Social Icons */}
         <div className="flex space-x-4 mb-6 md:mb-0">

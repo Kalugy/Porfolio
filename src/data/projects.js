@@ -28,12 +28,33 @@ export const projects = [
   {
     title: 'Rockvyn',
     description: 'A music-based app that allows users to explore, experience, and interact with sound-driven content in a modern and immersive interface. Available on the App Store.',
-    category: 'mobileapp',
+    category: ['webapp', 'game'],
     stack: ['React Native','expo', 'JavaScript', 'Expo'],
     image: '/images/rockvyn.PNG',
     demo: 'https://rockvyn.julianprojects.com/',
     role: 'Software Developer',
     featured: true
+  },
+  {
+    title: 'Earthquake Guide',
+    description: 'An innovative platform for self development! Open for Beta Testers!. Click Start on the website, and welcome to the beta program!',
+    longDescription: 'Earthquake Guide is a comprehensive platform designed to help users prepare for and respond to earthquakes. The platform includes features for earthquake预警, earthquake history, and earthquake prevention.',
+    category: 'webapp',
+    stack: ['Javascript', 'HTML', 'CSS'],
+    image: '/images/eathquakeproject.PNG',
+    demo: 'https://guia-pasos-sismo.replit.app/',
+    featured: false,
+    role: 'Software Developer'
+  },
+  {
+    title: 'Porfolio Japan Style',
+    description: 'A portfolio website designed in a Japanese style.',
+    category: 'webapp',
+    stack: ['HTML', 'CSS', 'Vibecoding','Javascript', 'WebGL'],
+    image: '/images/porfoliojapanstyle.PNG',
+    demo: 'https://portfolio.julianprojects.com/',
+    featured: false,
+    role: 'Software Developer'
   },
   {
     title: 'Sound Mixer',

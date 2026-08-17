@@ -3,6 +3,7 @@ import Layout from './Layout';
 import HomeScreen from './pages/HomeScreen';
 import ProjectScreen from './pages/ProjectScreen';
 import { ThemeProvider } from './context/ThemeContext';
+import { CinemaModeProvider } from './context/CinemaModeContext';
 import ResumeScreen from './pages/ResumeScreen';
 import ContactScreen from './pages/ContactScreen';
 import StackScreen from './pages/StackScreen';
@@ -11,6 +12,7 @@ import BlogDetailScreen from './pages/BlogDetailScreen';
 function App() {
   return (
     <ThemeProvider>
+      <CinemaModeProvider>
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<HomeScreen />} />
@@ -22,6 +24,7 @@ function App() {
           <Route path="/blog/:id" element={<BlogDetailScreen />} />
         </Route>
       </Routes>
+      </CinemaModeProvider>
     </ThemeProvider>
   );
 }

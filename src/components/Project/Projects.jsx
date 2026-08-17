@@ -2,6 +2,23 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { projects, categories } from '../../data/projects';
 
+const getProjectCategories = (project) =>
+  Array.isArray(project.category) ? project.category : [project.category];
+
+const projectInCategory = (project, categoryId) =>
+  getProjectCategories(project).includes(categoryId);
+
+const categoryLabels = {
+  webapp: 'Web Application',
+  game: 'Game Development',
+  art: 'Art & Design',
+};
+
+const formatProjectCategories = (project) =>
+  getProjectCategories(project)
+    .map((id) => categoryLabels[id] || id)
+    .join(' · ');
+
 const Projects = () => {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [selectedProject, setSelectedProject] = useState(null);
@@ -9,7 +26,7 @@ const Projects = () => {
 
   const filteredProjects = selectedCategory === 'all' 
     ? projects 
-    : projects.filter(project => project.category === selectedCategory);
+    : projects.filter(project => projectInCategory(project, selectedCategory));
 
   const handleProjectClick = (project) => {
     setSelectedProject(project);
@@ -55,7 +72,7 @@ const Projects = () => {
             >
               {category.name}
               <span className="ml-1 text-gray-900 dark:text-gray-100 text-sm">
-                ({category.id === 'all' ? projects.length : projects.filter(project => project.category === category.id).length})
+                ({category.id === 'all' ? projects.length : projects.filter(project => projectInCategory(project, category.id)).length})
               </span>  
             </button>
           ))}
@@ -110,7 +127,7 @@ const Projects = () => {
                     rel="noopener noreferrer"
                     className="flex-1 px-4 py-2 bg-indigo-600 text-white rounded-lg text-center hover:bg-indigo-700 transition-colors"
                   >
-                    {project.category === 'art' ? 'View Artwork' : 'Live Demo'}
+                    {projectInCategory(project, 'art') ? 'View Artwork' : 'Live Demo'}
                   </a>
                   {project.github && (
                     <a
@@ -141,8 +158,7 @@ const Projects = () => {
               <div className="flex justify-between items-start mb-6">
                 <div>
                   <span className="text-sm font-medium text-indigo-600 dark:text-indigo-400 mb-2 block">
-                    {selectedProject.category === 'webapp' ? 'Web Application' : 
-                     selectedProject.category === 'game' ? 'Game Development' : 'Art & Design'}
+                    {formatProjectCategories(selectedProject)}
                   </span>
                   <h3 className="text-3xl font-bold text-gray-900 dark:text-white">{selectedProject.title}</h3>
                 </div>
