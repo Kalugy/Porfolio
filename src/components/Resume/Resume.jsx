@@ -4,6 +4,20 @@ import Roles from './Roles';
 import Rain from '../Rain/Rain';
 const experience = [
   {
+    company: 'Freelance',
+    location: 'Remote',
+    role: 'Software Developer',
+    tasks: [
+      'Building custom software solutions for clients end to end',
+      'Collaborating on product ideas, requirements, and technical strategy',
+      'Delivering MVPs, prototypes, and production-ready features',
+      'Working across frontend, backend, and full stack development',
+      'Available for new freelance projects and collaborations'
+    ],
+    date: '2026 - Present',
+    isActive: true
+  },
+  {
     company: 'Replit',
     location: 'Remote',
     role: 'Support Technical Specialist',
@@ -15,7 +29,7 @@ const experience = [
       'Collaborate with the development team to implement new features and improvements'
     ],
     date: '2025-2026',
-    isActive: true
+    isActive: false
   },
   {
     company: 'Elliot Systems',
@@ -29,7 +43,7 @@ const experience = [
       'Collaborate with the development team to implement new features and improvements'
     ],
     date: '2025-2026',
-    isActive: true
+    isActive: false
   },
   {
     company: 'Freelance',
@@ -232,6 +246,40 @@ export default function Resume() {
     <section className="py-20 px-4 bg-white dark:bg-gray-900 relative">
       <Rain intensity={30} speed="slow" opacity={0.4} />
     <div className="max-w-4xl mx-auto px-4 py-12 mt-12">
+      {/* Personal intro */}
+      <div className="mb-14 grid md:grid-cols-2 gap-8 items-center">
+        <div className="space-y-4">
+          <p className="text-sm font-medium tracking-wide uppercase text-emerald-600 dark:text-emerald-400">
+            A bit more about me
+          </p>
+          <h2 className="text-3xl font-bold text-gray-900 dark:text-white">
+           I'm Julian
+          </h2>
+          <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
+            I'm from Colombia. I enjoy nature and sports, these days that mostly means running near mountains. In my free time I like different things: building, learning, movies, series, anime, manga, and reading about different cultures.
+          </p>
+          <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
+            I'm pretty open-minded. Feel free to reach out for any anime series recommendations but I've probably already watched it, haha.
+          </p>
+          <Link
+            onClick={() => window.scrollTo(0, 0)}
+            to="/contact"
+            className="inline-flex items-center gap-2 text-indigo-600 dark:text-indigo-400 hover:text-indigo-500 dark:hover:text-indigo-300 font-medium transition-colors"
+          >
+            Let's connect →
+          </Link>
+        </div>
+        <div>
+          <div className="relative overflow-hidden rounded-2xl max-w-sm mx-auto md:ml-auto">
+            <img
+              src="/images/about.png"
+              alt="Julian from Colombia"
+              className="w-full h-auto object-contain"
+            />
+          </div>
+        </div>
+      </div>
+
       <Roles />
       {/* Experience Section */}
       <section className="mb-12">

@@ -3,7 +3,6 @@ import { NavLink, useLocation } from 'react-router-dom';
 import { useTheme } from '../../context/ThemeContext';
 import { useCinemaMode } from '../../context/CinemaModeContext';
 import { FaMoon, FaSun, FaGithub } from 'react-icons/fa';
-import { SiReplit } from 'react-icons/si';
 
 const Navbar = () => {
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -106,26 +105,15 @@ const Navbar = () => {
             ))}
             
             
-          <div className="flex items-center gap-4">
-            <a
-              href="https://github.com/kalugy"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="GitHub"
-              className="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors"
-            >
-              <FaGithub className="w-5 h-5 dark:text-white text-gray-700" />
-            </a>
-            <a
-              href="https://community-hub.replit.app/profile/jtreplitsupport"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Replit"
-              className="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors"
-            >
-              <SiReplit className="w-5 h-5 dark:text-white text-gray-700" />
-            </a>
-          </div>
+          <a
+            href="https://github.com/kalugy"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="GitHub"
+            className="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors"
+          >
+            <FaGithub className="w-5 h-5 dark:text-white text-gray-700" />
+          </a>
           
           {/*ES y EN button */}
           </div>
@@ -179,15 +167,6 @@ const Navbar = () => {
               className="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors"
             >
               <FaGithub className="w-5 h-5 dark:text-white text-gray-700" />
-            </a>
-            <a
-              href="https://community-hub.replit.app/profile/jtreplitsupport"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Replit"
-              className="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors"
-            >
-              <SiReplit className="w-5 h-5 dark:text-white text-gray-700" />
             </a>
           </div>
 
