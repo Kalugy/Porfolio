@@ -256,10 +256,13 @@ export default function Resume() {
            I'm Julian
           </h2>
           <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
-            I'm from Colombia. I enjoy nature and sports, these days that mostly means running near mountains. In my free time I like different things: building, learning, movies, series, anime, manga, and reading about different cultures.
+            I'm from Colombia, and I have a strong appreciation for nature and sports. These days, that mostly means running through mountainous areas and enjoying the outdoors.
           </p>
           <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
-            I'm pretty open-minded. Feel free to reach out for any anime series recommendations but I've probably already watched it, haha.
+            In my free time, I enjoy a variety of interests, including building things, learning, watching movies and series, exploring anime and manga, and discovering different cultures and perspectives.
+          </p>
+          <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
+            I consider myself open-minded and always enjoy meeting people with different interests and experiences. Feel free to reach out if you're looking for anime recommendations.
           </p>
           <Link
             onClick={() => window.scrollTo(0, 0)}
