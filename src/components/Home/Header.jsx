@@ -73,7 +73,7 @@ const ContactUsSection = () => {
             <a href="#stack" className="text-indigo-600 dark:text-indigo-400 hover:underline font-semibold">
               stacks
             </a>.
-            I enjoy coding, troubleshooting, solving problems, and managing products.
+            I enjoy troubleshooting, solving problems, managing and building products.
           </h2>
 
           <motion.div

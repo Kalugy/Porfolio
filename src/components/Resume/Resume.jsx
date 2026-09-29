@@ -255,14 +255,14 @@ export default function Resume() {
           <h2 className="text-3xl font-bold text-gray-900 dark:text-white">
            I'm Julian
           </h2>
-          <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
+          <p className="text-gray-600 dark:text-gray-400 leading-relaxed text-justify">
             I'm from Colombia, and I have a strong appreciation for nature and sports. These days, that mostly means running through mountainous areas and enjoying the outdoors.
           </p>
-          <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
+          <p className="text-gray-600 dark:text-gray-400 leading-relaxed text-justify">
             In my free time, I enjoy a variety of interests, including building things, learning, watching movies and series, exploring anime and manga, and discovering different cultures and perspectives.
           </p>
-          <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
-            I consider myself open-minded and always enjoy meeting people with different interests and experiences. Feel free to reach out if you're looking for anime recommendations.
+          <p className="text-gray-600 dark:text-gray-400 leading-relaxed text-justify">
+            I consider myself open-minded and always enjoy meeting people with different interests and experiences. Feel free to reach out if you're looking for movies, series or anime recommendations.
           </p>
           <Link
             onClick={() => window.scrollTo(0, 0)}
@@ -273,11 +273,11 @@ export default function Resume() {
           </Link>
         </div>
         <div>
-          <div className="relative overflow-hidden rounded-2xl max-w-sm mx-auto md:ml-auto">
+          <div className="relative overflow-hidden rounded-full aspect-square w-full max-w-sm mx-auto md:ml-auto bg-transparent">
             <img
-              src="/images/about.png"
+              src="/images/newAbout.png"
               alt="Julian from Colombia"
-              className="w-full h-auto object-contain"
+              className="w-full h-full object-cover"
             />
           </div>
         </div>
