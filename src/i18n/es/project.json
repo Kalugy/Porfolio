@@ -1,0 +1,27 @@
+{
+  "title": "Mis proyectos",
+  "description": "Proyectos personales como apps, juegos y arte, cada uno combinando código y diseño.",
+  "mainRoles": "Roles principales:",
+  "mainRolesValue": "Software Developer, Tech Lead",
+  "categories": {
+    "all": "Todos los proyectos",
+    "webapp": "Web/Móvil",
+    "game": "Juegos",
+    "art": "Arte y diseño visual"
+  },
+  "categoryLabels": {
+    "webapp": "Aplicación web",
+    "game": "Desarrollo de juegos",
+    "art": "Arte y diseño"
+  },
+  "featured": "Destacado",
+  "liveDemo": "Demo en vivo",
+  "viewCode": "Ver código",
+  "viewArtwork": "Ver obra",
+  "overview": "Resumen",
+  "technologies": "Tecnologías usadas",
+  "challenges": "Desafíos clave",
+  "achievements": "Logros",
+  "role": "Rol:",
+  "statusCompleted": "Completado"
+}

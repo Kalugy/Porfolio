@@ -4,10 +4,12 @@ import { Link } from 'react-router-dom';
 import { FaFilm } from 'react-icons/fa';
 import Rain from '../Rain/Rain';
 import { useCinemaMode } from '../../context/CinemaModeContext';
+import { useLanguage } from '../../context/LanguageContext';
 
 const ContactUsSection = () => {
   const [showDrawing, setShowDrawing] = useState(false);
   const { isCinemaMode, toggleCinemaMode } = useCinemaMode();
+  const { t } = useLanguage();
 
   return (
     <section className={`flex items-center px-4 bg-gradient-to-b from-[#e4e0ff] to-white dark:from-gray-800 dark:to-gray-900 relative overflow-hidden transition-all duration-700 ${
@@ -55,7 +57,7 @@ const ContactUsSection = () => {
                 <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-75" />
                 <span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-emerald-500" />
               </span>
-              Available for work
+              {t('home.hero.available')}
             </Link>
           </motion.div>
 
@@ -65,15 +67,15 @@ const ContactUsSection = () => {
             transition={{ duration: 0.5 }}
             className="text-left text-4xl md:text-5xl font-bold mt-0 mb-0 tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-indigo-600 to-purple-600 dark:from-indigo-400 dark:to-purple-400"
           >
-            Hey, I'm Julian!
+            {t('home.hero.title')}
           </motion.h1>
           
           <h2 className="text-lg sm:text-xl md:text-2xl font-medium leading-relaxed">
-            I'm a developer with experience in both front-end and full-stack development, I've worked with various{' '}
+            {t('home.hero.subtitleBefore')}{' '}
             <a href="#stack" className="text-indigo-600 dark:text-indigo-400 hover:underline font-semibold">
-              stacks
-            </a>.
-            I enjoy troubleshooting, solving problems, managing and building products.
+              {t('home.hero.stacks')}
+            </a>
+            {t('home.hero.subtitleAfter')}
           </h2>
 
           <motion.div
@@ -82,7 +84,7 @@ const ContactUsSection = () => {
             transition={{ duration: 0.5, delay: 0.2 }}
           >
             <p className="text-sm sm:text-base md:text-lg leading-relaxed text-gray-700 dark:text-gray-300">
-              When I'm not coding, you'll find me playing sports, enjoying anime and manga, gaming, or exploring the outdoors.
+              {t('home.hero.hobby')}
             </p>
           </motion.div>
 
@@ -93,7 +95,7 @@ const ContactUsSection = () => {
               href="#about"
               className="bg-indigo-600 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-lg hover:bg-indigo-700 transition-all duration-300 shadow-lg hover:shadow-xl flex items-center gap-2 text-sm sm:text-base"
             >
-              About me
+              {t('home.hero.aboutMe')}
               <svg className="w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
               </svg>
@@ -105,7 +107,7 @@ const ContactUsSection = () => {
               href="#projects"
               className="bg-[#136245] text-white px-6 sm:px-8 py-3 sm:py-4 rounded-lg hover:bg-[#0d4b33] transition-all duration-300 shadow-lg hover:shadow-xl flex items-center gap-2 text-sm sm:text-base"
             >
-              Projects
+              {t('home.hero.projects')}
               <svg className="w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
               </svg>
@@ -116,8 +118,8 @@ const ContactUsSection = () => {
               whileHover={{ scale: 1.08 }}
               whileTap={{ scale: 0.95 }}
               onClick={toggleCinemaMode}
-              aria-label="Watch the sky"
-              title="Watch the sky"
+              aria-label={t('home.hero.watchSky')}
+              title={t('home.hero.watchSky')}
               className="p-3 sm:p-3.5 rounded-lg bg-black/20 dark:bg-white/10 text-gray-800 dark:text-gray-200 hover:bg-black/30 dark:hover:bg-white/20 transition-all duration-300 shadow-md"
             >
               <FaFilm className="w-5 h-5" />

@@ -4,6 +4,7 @@ import HomeScreen from './pages/HomeScreen';
 import ProjectScreen from './pages/ProjectScreen';
 import { ThemeProvider } from './context/ThemeContext';
 import { CinemaModeProvider } from './context/CinemaModeContext';
+import { LanguageProvider } from './context/LanguageContext';
 import ResumeScreen from './pages/ResumeScreen';
 import ContactScreen from './pages/ContactScreen';
 import StackScreen from './pages/StackScreen';
@@ -12,19 +13,21 @@ import BlogDetailScreen from './pages/BlogDetailScreen';
 function App() {
   return (
     <ThemeProvider>
-      <CinemaModeProvider>
-      <Routes>
-        <Route path="/" element={<Layout />}>
-          <Route index element={<HomeScreen />} />
-          <Route path="/projects" element={<ProjectScreen />} />
-          <Route path="/resume" element={<ResumeScreen />} />
-          <Route path="/contact" element={<ContactScreen />} />
-          <Route path="/stack" element={<StackScreen />} />
-          <Route path="/blog" element={<BlogScreen />} />
-          <Route path="/blog/:id" element={<BlogDetailScreen />} />
-        </Route>
-      </Routes>
-      </CinemaModeProvider>
+      <LanguageProvider>
+        <CinemaModeProvider>
+          <Routes>
+            <Route path="/" element={<Layout />}>
+              <Route index element={<HomeScreen />} />
+              <Route path="/projects" element={<ProjectScreen />} />
+              <Route path="/resume" element={<ResumeScreen />} />
+              <Route path="/contact" element={<ContactScreen />} />
+              <Route path="/stack" element={<StackScreen />} />
+              <Route path="/blog" element={<BlogScreen />} />
+              <Route path="/blog/:id" element={<BlogDetailScreen />} />
+            </Route>
+          </Routes>
+        </CinemaModeProvider>
+      </LanguageProvider>
     </ThemeProvider>
   );
 }

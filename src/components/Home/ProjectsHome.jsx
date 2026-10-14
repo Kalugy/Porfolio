@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom';
 import Rain from '../Rain/Rain';
+import { useLanguage } from '../../context/LanguageContext';
 
 const projects = [
   {
@@ -40,6 +41,7 @@ const projects = [
 
 export default function Projects() {
   const [selectedProject, setSelectedProject] = useState(null);
+  const { t } = useLanguage();
 
   const handleProjectClick = (e, project) => {
     e.preventDefault();
@@ -57,10 +59,10 @@ export default function Projects() {
         <div className="flex flex-col md:flex-row items-start md:items-center justify-between mb-16">
           <div className="mb-8 md:mb-0">
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">
-              Featured Projects
+              {t('home.projects.title')}
             </h2>
             <p className="text-gray-600 dark:text-gray-400 text-lg max-w-2xl">
-              Explore some of my recent work and personal projects that showcase my skills and passion for development.
+              {t('home.projects.description')}
             </p>
           </div>
           <Link
@@ -68,7 +70,7 @@ export default function Projects() {
             to="/projects"
             className="inline-flex items-center px-6 py-3 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition-all duration-300 transform hover:-translate-y-1 hover:shadow-lg"
           >
-            View All Projects
+            {t('home.projects.viewAll')}
             <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
             </svg>

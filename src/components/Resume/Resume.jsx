@@ -2,6 +2,8 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import Roles from './Roles';
 import Rain from '../Rain/Rain';
+import { useLanguage } from '../../context/LanguageContext';
+
 const experience = [
   {
     company: 'Freelance',
@@ -242,6 +244,8 @@ const awards = [
 ];
 
 export default function Resume() {
+  const { t } = useLanguage();
+
   return (
     <section className="py-20 px-4 bg-white dark:bg-gray-900 relative">
       <Rain intensity={30} speed="slow" opacity={0.4} />
@@ -250,33 +254,33 @@ export default function Resume() {
       <div className="mb-14 grid md:grid-cols-2 gap-8 items-center">
         <div className="space-y-4">
           <p className="text-sm font-medium tracking-wide uppercase text-emerald-600 dark:text-emerald-400">
-            A bit more about me
+            {t('aboutme.intro.eyebrow')}
           </p>
           <h2 className="text-3xl font-bold text-gray-900 dark:text-white">
-           I'm Julian
+           {t('aboutme.intro.title')}
           </h2>
           <p className="text-gray-600 dark:text-gray-400 leading-relaxed text-justify">
-            I'm from Colombia, and I have a strong appreciation for nature and sports. These days, that mostly means running through mountainous areas and enjoying the outdoors.
+            {t('aboutme.intro.p1')}
           </p>
           <p className="text-gray-600 dark:text-gray-400 leading-relaxed text-justify">
-            In my free time, I enjoy a variety of interests, including building things, learning, watching movies and series, exploring anime and manga, and discovering different cultures and perspectives.
+            {t('aboutme.intro.p2')}
           </p>
           <p className="text-gray-600 dark:text-gray-400 leading-relaxed text-justify">
-            I consider myself open-minded and always enjoy meeting people with different interests and experiences. Feel free to reach out if you're looking for movies, series or anime recommendations.
+            {t('aboutme.intro.p3')}
           </p>
           <Link
             onClick={() => window.scrollTo(0, 0)}
             to="/contact"
             className="inline-flex items-center gap-2 text-indigo-600 dark:text-indigo-400 hover:text-indigo-500 dark:hover:text-indigo-300 font-medium transition-colors"
           >
-            Let's connect →
+            {t('aboutme.intro.connect')}
           </Link>
         </div>
         <div>
           <div className="relative overflow-hidden rounded-full aspect-square w-full max-w-sm mx-auto md:ml-auto bg-transparent">
             <img
               src="/images/newAbout.png"
-              alt="Julian from Colombia"
+              alt={t('aboutme.intro.imageAlt')}
               className="w-full h-full object-cover"
             />
           </div>

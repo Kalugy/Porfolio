@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { NavLink, useLocation } from 'react-router-dom';
 import { useTheme } from '../../context/ThemeContext';
 import { useCinemaMode } from '../../context/CinemaModeContext';
+import { useLanguage } from '../../context/LanguageContext';
 import { FaMoon, FaSun, FaGithub } from 'react-icons/fa';
 
 const Navbar = () => {
@@ -9,17 +10,32 @@ const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const { isDarkMode, toggleTheme } = useTheme();
   const { isCinemaMode } = useCinemaMode();
+  const { language, setLanguage, t, languages } = useLanguage();
   const location = useLocation();
 
   const menuItems = [
-    { name: "Home", href: "/" },
-    { name: "About Me", href: "/resume" },
-    { name: "Projects", href: "/projects" },
-    { name: "Stack", href: "/stack" },
-    { name: "Blog", href: "/blog" },
-    { name: "Contact", href: "/contact" },
-    // { name: "Comprar", href: "https://web.whatsapp.com/", isButton: true },
+    { name: t('common.nav.home'), href: "/" },
+    { name: t('common.nav.aboutMe'), href: "/resume" },
+    { name: t('common.nav.projects'), href: "/projects" },
+    { name: t('common.nav.stack'), href: "/stack" },
+    { name: t('common.nav.blog'), href: "/blog" },
+    { name: t('common.nav.contact'), href: "/contact" },
   ];
+
+  const languageSelect = (
+    <select
+      value={language}
+      onChange={(e) => setLanguage(e.target.value)}
+      aria-label={t('common.language.label')}
+      className="bg-gray-50 dark:bg-gray-800 text-gray-700 dark:text-gray-200 text-sm rounded-lg px-2 py-1.5 border border-gray-200 dark:border-gray-700 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+    >
+      {languages.map((lang) => (
+        <option key={lang.code} value={lang.code}>
+          {t(`common.language.${lang.code}`)}
+        </option>
+      ))}
+    </select>
+  );
 
   useEffect(() => {
     const handleScroll = () => {
@@ -68,12 +84,13 @@ const Navbar = () => {
               />
             </span>
             <span className="text-lg sm:text-xl font-bold leading-none bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">
-              Julian's Portfolio
+              {t('common.nav.brand')}
             </span>
           </NavLink>
 
           {/* Desktop Menu */}
           <div className="hidden md:flex items-center space-x-8">
+            {languageSelect}
             {/* Theme Toggle Button */}
             <button
               onClick={toggleTheme}
@@ -114,8 +131,6 @@ const Navbar = () => {
           >
             <FaGithub className="w-5 h-5 dark:text-white text-gray-700" />
           </a>
-          
-          {/*ES y EN button */}
           </div>
 
           {/* Mobile Menu Button */}
@@ -158,7 +173,7 @@ const Navbar = () => {
             </NavLink>
           ))}
           
-          <div className="flex items-center gap-4 px-4 py-2">
+          <div className="flex items-center justify-between gap-4 px-4 py-2">
             <a
               href="https://github.com/kalugy"
               target="_blank"
@@ -168,6 +183,7 @@ const Navbar = () => {
             >
               <FaGithub className="w-5 h-5 dark:text-white text-gray-700" />
             </a>
+            {languageSelect}
           </div>
 
           {/* Theme Toggle for Mobile */}
@@ -175,7 +191,7 @@ const Navbar = () => {
             onClick={toggleTheme}
             className="w-full flex items-center justify-between px-4 py-2 rounded-lg text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors"
           >
-            <span className="font-medium">Theme</span>
+            <span className="font-medium">{t('common.nav.theme')}</span>
             {isDarkMode ? (
               <FaSun className="w-5 h-5 text-yellow-500" />
             ) : (

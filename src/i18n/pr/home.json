@@ -1,0 +1,64 @@
+{
+  "hero": {
+    "available": "Disponível para trabalhar",
+    "title": "Olá, eu sou o Julian!",
+    "subtitleBefore": "Sou desenvolvedor com experiência em front-end e full-stack. Já trabalhei com várias",
+    "stacks": "stacks",
+    "subtitleAfter": ". Gosto de resolver problemas, depurar, gerenciar e construir produtos.",
+    "hobby": "Quando não estou programando, você me encontra praticando esportes, curtindo anime e mangá, jogando ou explorando a natureza.",
+    "aboutMe": "Sobre mim",
+    "projects": "Projetos",
+    "watchSky": "Ver o céu",
+    "exitSky": "Sair da visão do céu"
+  },
+  "about": {
+    "title": "Sobre mim",
+    "description": "Sou desenvolvedor de software com experiência em aplicações web e mobile, e sou apaixonado por aprender novas tecnologias e criar soluções.",
+    "viewResume": "Ver currículo completo →",
+    "experienceTitle": "Experiência",
+    "experienceText": "Atualmente disponível como desenvolvedor freelance, criando soluções web e mobile para clientes. Antes trabalhei como Support Technical Specialist na Replit e Elliot Systems, Full Stack Consultant na CannedHead e Jr Software Developer na BigPass Edenred."
+  },
+  "stack": {
+    "title": "Tech Stack",
+    "description": "Explore as tecnologias e ferramentas que uso para construir aplicações modernas, escaláveis e de alto desempenho.",
+    "viewFull": "Ver stack completo",
+    "learnMore": "Saiba mais",
+    "items": {
+      "frontend": {
+        "name": "Frontend",
+        "desc": "React, Next.js, Tailwind CSS e mais."
+      },
+      "backend": {
+        "name": "Backend",
+        "desc": "Node.js, Express, MongoDB e mais."
+      },
+      "mobile": {
+        "name": "Mobile",
+        "desc": "React Native, Flutter e mais."
+      },
+      "devops": {
+        "name": "DevOps",
+        "desc": "Docker, AWS, CI/CD e mais."
+      }
+    }
+  },
+  "projects": {
+    "title": "Projetos em destaque",
+    "description": "Explore alguns dos meus trabalhos recentes e projetos pessoais que mostram minhas habilidades e paixão pelo desenvolvimento.",
+    "viewAll": "Ver todos os projetos"
+  },
+  "contact": {
+    "title": "Entre em contato",
+    "description": "Vamos conversar sobre o seu próximo projeto.",
+    "viewAll": "Ver todas as informações de contato →",
+    "quickContact": "Contato rápido",
+    "quickContactText": "Fique à vontade para me escrever com perguntas ou oportunidades.",
+    "connect": "Conecte-se comigo",
+    "freelanceTitle": "Disponível freelance",
+    "freelanceText": "Tem uma pergunta ou oportunidade? Pode me escrever a qualquer momento!",
+    "hireMe": "Me contrate",
+    "supportTitle": "Apoie meu trabalho",
+    "supportText": "Gosta dos meus projetos? Me pague um café no Ko-fi — isso ajuda a manter novas ideias vindo.",
+    "donate": "Doar no Ko-fi"
+  }
+}

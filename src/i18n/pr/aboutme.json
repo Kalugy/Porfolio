@@ -1,0 +1,87 @@
+{
+  "intro": {
+    "eyebrow": "Um pouco mais sobre mim",
+    "title": "Eu sou o Julian",
+    "p1": "Sou da Colômbia e tenho uma forte apreciação pela natureza e pelos esportes. Hoje em dia, isso significa principalmente correr por áreas montanhosas e aproveitar o ar livre.",
+    "p2": "No meu tempo livre, gosto de vários interesses: construir coisas, aprender, assistir filmes e séries, explorar anime e mangá, e descobrir diferentes culturas e perspectivas.",
+    "p3": "Me considero uma pessoa de mente aberta e sempre gosto de conhecer pessoas com interesses e experiências diferentes. Pode me escrever se estiver procurando recomendações de filmes, séries ou anime.",
+    "connect": "Vamos conectar →",
+    "imageAlt": "Julian da Colômbia"
+  },
+  "roles": {
+    "title": "Objetivos de papéis",
+    "currentFocus": "Foco atual",
+    "currentTitle": "AI-Augmented Full-Stack / Product Engineer",
+    "currentStack": "React • React Native • Node.js • TypeScript • AI APIs • Supabase • Cloud",
+    "currentDescription": "Construir produtos digitais de ponta a ponta usando IA e ferramentas modernas. Foco em transformar ideias e problemas de usuários em produtos funcionais, experimentar rápido, aprender novas tecnologias e entregar melhorias.",
+    "targetTitle": "Papéis-alvo",
+    "targetNote": "Esses não são apenas títulos teóricos. As vagas atuais já usam combinações desses títulos e responsabilidades.",
+    "targets": [
+      {
+        "title": "Full-Stack Software Engineer",
+        "focus": "Ponto de entrada no mercado",
+        "description": "Base sólida em frontend, backend e entrega de software em produção — o ponto de entrada prático para papéis de construção de produtos."
+      },
+      {
+        "title": "AI Product Engineer",
+        "focus": "Frontend • Backend • APIs • Bancos de dados • IA",
+        "description": "Construir e lançar produtos com IA trabalhando em frontend, backend, APIs, bancos de dados e integrações de IA."
+      },
+      {
+        "title": "Product Engineer",
+        "focus": "Ideia → Implementação",
+        "description": "Assumir funcionalidades da ideia à implementação, combinando desenvolvimento, UX, experimentação, debugging e deploy."
+      },
+      {
+        "title": "Full-Stack AI Engineer",
+        "focus": "LLMs • Agentes • Automação",
+        "description": "Construir aplicações full-stack e integrar LLMs, agentes, automação e fluxos com IA."
+      },
+      {
+        "title": "AI-Native Product Builder",
+        "focus": "Pensamento de produto × Engenharia",
+        "description": "Usar ferramentas de desenvolvimento com IA para prototipar e lançar produtos rapidamente, entre pensamento de produto e engenharia."
+      }
+    ],
+    "growthTitle": "Caminho de crescimento",
+    "stages": [
+      {
+        "duration": "2 a 4 anos",
+        "title": "Senior Product Engineer / Senior AI Product Engineer",
+        "focus": "Profundidade em vez de colecionar linguagens",
+        "description": "Tornar-me alguém que possa pegar um problema ambíguo e ir de: Problema → ideia → protótipo → integração de IA → produto → produção → iteração. Construir profundidade em vez de apenas colecionar linguagens de programação."
+      },
+      {
+        "duration": "4 a 7 anos",
+        "title": "Product Engineering Lead / AI Product Lead",
+        "focus": "Liderança hands-on",
+        "description": "Liderar iniciativas de construção de produto permanecendo tecnicamente hands-on.",
+        "focusAreas": [
+          "Decisões de produto",
+          "Adoção de IA",
+          "Arquitetura",
+          "Experimentação rápida",
+          "Experiência do usuário",
+          "Estratégia técnica",
+          "Mentoria",
+          "Shipping"
+        ]
+      },
+      {
+        "duration": "7+ anos",
+        "title": "AI Product Builder / Founder",
+        "focus": "Ownership e criação",
+        "description": "Construir meus próprios produtos ou trabalhar com startups onde eu possa ter ownership significativo sobre o que é construído."
+      }
+    ],
+    "summaryTitle": "Resumo da trajetória",
+    "summary": [
+      "Minha direção de carreira é me tornar um AI-native product builder.",
+      "Não quero me definir principalmente por linguagens de programação ou como um coder tradicional. Vejo tecnologia, desenvolvimento de software e IA como ferramentas para transformar ideias e problemas em produtos úteis.",
+      "Meu objetivo é ser cada vez mais eficaz no processo completo de construção de produtos: entender problemas, explorar ideias, prototipar, usar IA e ferramentas modernas, construir produtos funcionais, testá-los com usuários, aprender com o feedback e melhorar continuamente.",
+      "No curto prazo, quero mirar papéis como Full-Stack Software Engineer, Product Engineer, AI Product Engineer, Full-Stack AI Engineer e AI-Native Product Builder, enquanto fortaleço minha base técnica e aprendo as ferramentas e abordagens mais recentes.",
+      "No longo prazo, quero avançar para Product Engineering Lead, AI Product Lead e eventualmente AI Product Builder ou Founder, onde posso combinar tecnologia, IA, pensamento de produto, criatividade e negócios para criar produtos da ideia à realidade.",
+      "A direção não é se afastar da tecnologia. É usar a tecnologia de forma mais eficaz como meio para construir produtos."
+    ]
+  }
+}

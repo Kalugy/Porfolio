@@ -1,17 +1,20 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import Rain from '../Rain/Rain';
+import { useLanguage } from '../../context/LanguageContext';
 
 export default function ResumeHome() {
+  const { t } = useLanguage();
+
   return (
     <section className="py-20 px-4 bg-white dark:bg-gray-900 relative" id="about">
       <Rain intensity={30} speed="slow" opacity={0.4} />
       <div className="max-w-6xl mx-auto">
         <div className="flex items-center justify-between mb-12">
           <div>
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">About Me</h2>
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">{t('home.about.title')}</h2>
             <p className="text-gray-600 dark:text-gray-400 text-lg">
-              I'm a software developer with experience in building web and mobile applications, and I'm passionate about learning new technologies and creating solutions.
+              {t('home.about.description')}
             </p>
           </div>
           <Link
@@ -19,17 +22,16 @@ export default function ResumeHome() {
             to="/resume"
             className="text-indigo-600 dark:text-indigo-400 hover:text-indigo-500 dark:hover:text-indigo-300 transition-colors duration-300 font-medium"
           >
-            View Full Resume →
+            {t('home.about.viewResume')}
           </Link>
         </div>
 
         <div className="grid md:grid-cols-2 gap-8">
           {/* Experience Summary */}
           <div className="bg-gray-50 dark:bg-gray-800 p-6 rounded-xl shadow-lg">
-            <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">Experience</h3>
+            <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">{t('home.about.experienceTitle')}</h3>
             <p className="text-gray-600 dark:text-gray-400 mb-4">
-              Currently available as a Freelance Software Developer, building web and mobile solutions for clients.
-              Previously worked as a Support Technical Specialist at Replit and Elliot Systems, and as a Full Stack Consultant at CannedHead and Jr Software Developer at BigPass Edenred.
+              {t('home.about.experienceText')}
             </p>
             <div className="flex flex-wrap gap-2">
               <span className="px-3 py-1 text-sm bg-indigo-100 dark:bg-indigo-900 text-indigo-700 dark:text-indigo-300 rounded-full">

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { projects, categories } from '../../data/projects';
+import { useLanguage } from '../../context/LanguageContext';
 
 const getProjectCategories = (project) =>
   Array.isArray(project.category) ? project.category : [project.category];
@@ -8,21 +9,16 @@ const getProjectCategories = (project) =>
 const projectInCategory = (project, categoryId) =>
   getProjectCategories(project).includes(categoryId);
 
-const categoryLabels = {
-  webapp: 'Web Application',
-  game: 'Game Development',
-  art: 'Art & Design',
-};
-
-const formatProjectCategories = (project) =>
-  getProjectCategories(project)
-    .map((id) => categoryLabels[id] || id)
-    .join(' · ');
-
 const Projects = () => {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [selectedProject, setSelectedProject] = useState(null);
   const navigate = useNavigate();
+  const { t } = useLanguage();
+
+  const formatProjectCategories = (project) =>
+    getProjectCategories(project)
+      .map((id) => t(`project.categoryLabels.${id}`) || id)
+      .join(' · ');
 
   const filteredProjects = selectedCategory === 'all' 
     ? projects 
@@ -48,13 +44,13 @@ const Projects = () => {
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">
-            My Projects
+            {t('project.title')}
           </h2>
           <p className="text-gray-600 dark:text-gray-400 text-lg max-w-2xl mx-auto">
-          Personal projects like apps, games, and art, each combining code and design.
+            {t('project.description')}
           </p>
           <p className="text-gray-600 dark:text-gray-400 text-lg max-w-2xl mx-auto">
-          <strong>Main Roles:</strong> Software Developer, Tech Lead
+            <strong>{t('project.mainRoles')}</strong> {t('project.mainRolesValue')}
           </p>
         </div>
 
@@ -70,7 +66,7 @@ const Projects = () => {
                   : 'bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700'
               }`}
             >
-              {category.name}
+              {t(`project.categories.${category.id}`)}
               <span className="ml-1 text-gray-900 dark:text-gray-100 text-sm">
                 ({category.id === 'all' ? projects.length : projects.filter(project => projectInCategory(project, category.id)).length})
               </span>  
@@ -94,7 +90,7 @@ const Projects = () => {
                 />
                 {project.featured && (
                   <span className="absolute top-4 right-4 bg-indigo-600 text-white text-xs px-3 py-1 rounded-full">
-                    Featured
+                    {t('project.featured')}
                   </span>
                 )}
               </div>
@@ -127,7 +123,7 @@ const Projects = () => {
                     rel="noopener noreferrer"
                     className="flex-1 px-4 py-2 bg-indigo-600 text-white rounded-lg text-center hover:bg-indigo-700 transition-colors"
                   >
-                    {projectInCategory(project, 'art') ? 'View Artwork' : 'Live Demo'}
+                    {projectInCategory(project, 'art') ? t('project.viewArtwork') : t('project.liveDemo')}
                   </a>
                   {project.github && (
                     <a
@@ -136,7 +132,7 @@ const Projects = () => {
                       rel="noopener noreferrer"
                       className="flex-1 px-4 py-2 border border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 rounded-lg text-center hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors"
                     >
-                      View Code
+                      {t('project.viewCode')}
                     </a>
                   )}
                 </div>
@@ -176,11 +172,11 @@ const Projects = () => {
               <div className="mb-6">
                 <div className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-indigo-100 text-indigo-800 dark:bg-indigo-900 dark:text-indigo-200">
                   <span className="w-2 h-2 rounded-full bg-indigo-500 mr-2"></span>
-                  {selectedProject.status || 'Completed'}
+                  {selectedProject.status || t('project.statusCompleted')}
                 </div>
                 {selectedProject.role && (
                   <span className="ml-4 text-gray-600 dark:text-gray-400">
-                    Role: {selectedProject.role}
+                    {t('project.role')} {selectedProject.role}
                   </span>
                 )}
               </div>
@@ -196,7 +192,7 @@ const Projects = () => {
 
               {/* Project Description */}
               <div className="mb-8">
-                <h4 className="text-xl font-semibold text-gray-900 dark:text-white mb-3">Overview</h4>
+                <h4 className="text-xl font-semibold text-gray-900 dark:text-white mb-3">{t('project.overview')}</h4>
                 <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
                   {selectedProject.longDescription || selectedProject.description}
                 </p>
@@ -204,7 +200,7 @@ const Projects = () => {
 
               {/* Technologies Used */}
               <div className="mb-8">
-                <h4 className="text-xl font-semibold text-gray-900 dark:text-white mb-3">Technologies Used</h4>
+                <h4 className="text-xl font-semibold text-gray-900 dark:text-white mb-3">{t('project.technologies')}</h4>
                 <div className="flex flex-wrap gap-2">
                   {selectedProject.stack.map((tech, index) => (
                     <span
@@ -221,7 +217,7 @@ const Projects = () => {
               <div className="grid md:grid-cols-2 gap-8 mb-8">
                 {selectedProject.challenges && (
                   <div>
-                    <h4 className="text-xl font-semibold text-gray-900 dark:text-white mb-3">Key Challenges</h4>
+                    <h4 className="text-xl font-semibold text-gray-900 dark:text-white mb-3">{t('project.challenges')}</h4>
                     <ul className="space-y-2">
                       {selectedProject.challenges.map((challenge, index) => (
                         <li key={index} className="flex items-start text-gray-600 dark:text-gray-400">
@@ -237,7 +233,7 @@ const Projects = () => {
 
                 {selectedProject.achievements && (
                   <div>
-                    <h4 className="text-xl font-semibold text-gray-900 dark:text-white mb-3">Key Achievements</h4>
+                    <h4 className="text-xl font-semibold text-gray-900 dark:text-white mb-3">{t('project.achievements')}</h4>
                     <ul className="space-y-2">
                       {selectedProject.achievements.map((achievement, index) => (
                         <li key={index} className="flex items-start text-gray-600 dark:text-gray-400">

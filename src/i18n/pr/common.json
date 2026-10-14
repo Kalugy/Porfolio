@@ -1,0 +1,18 @@
+{
+  "nav": {
+    "home": "Início",
+    "aboutMe": "Sobre mim",
+    "projects": "Projetos",
+    "stack": "Stack",
+    "blog": "Blog",
+    "contact": "Contato",
+    "theme": "Tema",
+    "brand": "Portfólio do Julian"
+  },
+  "language": {
+    "label": "Idioma",
+    "en": "English",
+    "es": "Español",
+    "pr": "Português"
+  }
+}

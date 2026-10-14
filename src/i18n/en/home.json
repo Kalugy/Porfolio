@@ -1,0 +1,64 @@
+{
+  "hero": {
+    "available": "Available for work",
+    "title": "Hey, I'm Julian!",
+    "subtitleBefore": "I'm a developer with experience in both front-end and full-stack development, I've worked with various",
+    "stacks": "stacks",
+    "subtitleAfter": ". I enjoy troubleshooting, solving problems, managing and building products.",
+    "hobby": "When I'm not coding, you'll find me playing sports, enjoying anime and manga, gaming, or exploring the outdoors.",
+    "aboutMe": "About me",
+    "projects": "Projects",
+    "watchSky": "Watch the sky",
+    "exitSky": "Exit sky view"
+  },
+  "about": {
+    "title": "About Me",
+    "description": "I'm a software developer with experience in building web and mobile applications, and I'm passionate about learning new technologies and creating solutions.",
+    "viewResume": "View Full Resume →",
+    "experienceTitle": "Experience",
+    "experienceText": "Currently available as a Freelance Software Developer, building web and mobile solutions for clients. Previously worked as a Support Technical Specialist at Replit and Elliot Systems, and as a Full Stack Consultant at CannedHead and Jr Software Developer at BigPass Edenred."
+  },
+  "stack": {
+    "title": "Tech Stack",
+    "description": "Explore the technologies and tools I use to build modern, scalable, and performant applications.",
+    "viewFull": "View Full Stack",
+    "learnMore": "Learn More",
+    "items": {
+      "frontend": {
+        "name": "Frontend",
+        "desc": "React, Next.js, Tailwind CSS, and more."
+      },
+      "backend": {
+        "name": "Backend",
+        "desc": "Node.js, Express, MongoDB, and more."
+      },
+      "mobile": {
+        "name": "Mobile",
+        "desc": "React Native, Flutter, and more."
+      },
+      "devops": {
+        "name": "DevOps",
+        "desc": "Docker, AWS, CI/CD, and more."
+      }
+    }
+  },
+  "projects": {
+    "title": "Featured Projects",
+    "description": "Explore some of my recent work and personal projects that showcase my skills and passion for development.",
+    "viewAll": "View All Projects"
+  },
+  "contact": {
+    "title": "Get in Touch",
+    "description": "Let's connect and discuss your next project.",
+    "viewAll": "View All Contact Info →",
+    "quickContact": "Quick Contact",
+    "quickContactText": "Feel free to contact me for any questions or opportunities.",
+    "connect": "Connect With Me",
+    "freelanceTitle": "Freelance Available",
+    "freelanceText": "Got a question or an opportunity in mind? Feel free to reach out anytime!",
+    "hireMe": "Hire Me",
+    "supportTitle": "Support My Work",
+    "supportText": "Enjoy my projects? Buy me a coffee on Ko-fi — it helps keep new ideas coming.",
+    "donate": "Donate on Ko-fi"
+  }
+}

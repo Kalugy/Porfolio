@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { useLanguage } from '../../context/LanguageContext';
 
 const socialLinks = [
   {
@@ -30,14 +31,16 @@ const socialLinks = [
 ];
 
 export default function ContactHome() {
+  const { t } = useLanguage();
+
   return (
     <section id="contact" className="py-20 px-4 bg-white dark:bg-gray-900">
       <div className="max-w-5xl mx-auto">
         <div className="flex items-center justify-between mb-12">
           <div>
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">Get in Touch</h2>
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">{t('home.contact.title')}</h2>
             <p className="text-gray-600 dark:text-gray-400 text-lg">
-              Let's connect and discuss your next project.
+              {t('home.contact.description')}
             </p>
           </div>
           <Link
@@ -45,14 +48,14 @@ export default function ContactHome() {
             to="/contact"
             className="text-indigo-600 dark:text-indigo-400 hover:text-indigo-500 dark:hover:text-indigo-300 transition-colors duration-300 font-medium"
           >
-            View All Contact Info →
+            {t('home.contact.viewAll')}
           </Link>
         </div>
 
         <div className="grid md:grid-cols-2 gap-8">
           {/* Quick Contact */}
           <div className="bg-gray-50 dark:bg-gray-800 p-6 rounded-xl shadow-lg">
-            <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">Quick Contact</h3>
+            <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">{t('home.contact.quickContact')}</h3>
             <a
               href="mailto:danieltrujillo902@gmail.com"
               className="text-xl text-indigo-600 dark:text-indigo-400 hover:text-indigo-500 dark:hover:text-indigo-300 transition-colors duration-300 block mb-4"
@@ -60,13 +63,13 @@ export default function ContactHome() {
               danieltrujillo902@gmail.com
             </a>
             <p className="text-gray-600 dark:text-gray-400">
-              Feel free to contact me for any questions or opportunities.
+              {t('home.contact.quickContactText')}
             </p>
           </div>
 
           {/* Social Links */}
           <div className="bg-gray-50 dark:bg-gray-800 p-6 rounded-xl shadow-lg">
-            <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">Connect With Me</h3>
+            <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">{t('home.contact.connect')}</h3>
             <div className="flex flex-wrap gap-4">
               {socialLinks.map((link) => (
                 <a
@@ -91,9 +94,9 @@ export default function ContactHome() {
         <div className="mt-8 bg-gray-50 dark:bg-gray-800 p-6 rounded-xl shadow-lg">
           <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
             <div>
-              <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mb-2">Freelance Available</h3>
+              <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mb-2">{t('home.contact.freelanceTitle')}</h3>
               <p className="text-gray-600 dark:text-gray-400">
-                Got a question or an opportunity in mind? Feel free to reach out anytime!
+                {t('home.contact.freelanceText')}
               </p>
             </div>
             <a
@@ -102,7 +105,7 @@ export default function ContactHome() {
               rel="noopener noreferrer"
               className="px-6 py-3 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition-colors duration-300 text-center font-medium shrink-0"
             >
-              Hire Me
+              {t('home.contact.hireMe')}
             </a>
           </div>
         </div>
@@ -111,9 +114,9 @@ export default function ContactHome() {
         <div className="mt-8 bg-gray-50 dark:bg-gray-800 p-6 rounded-xl shadow-lg">
           <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
             <div>
-              <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mb-2">Support My Work</h3>
+              <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mb-2">{t('home.contact.supportTitle')}</h3>
               <p className="text-gray-600 dark:text-gray-400">
-                Enjoy my projects? Buy me a coffee on Ko-fi — it helps keep new ideas coming.
+                {t('home.contact.supportText')}
               </p>
             </div>
             <a
@@ -122,7 +125,7 @@ export default function ContactHome() {
               rel="noopener noreferrer"
               className="px-6 py-3 bg-[#FF5E5B] text-white rounded-lg hover:bg-[#e54e4b] transition-colors duration-300 text-center font-medium shrink-0"
             >
-              Donate on Ko-fi
+              {t('home.contact.donate')}
             </a>
           </div>
         </div>

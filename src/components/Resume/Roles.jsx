@@ -1,81 +1,5 @@
 import React from 'react';
-
-const currentRole = {
-  title: 'AI-Augmented Full-Stack / Product Engineer',
-  stack: 'React • React Native • Node.js • TypeScript • PHP • MongoDB • PostgreSQL • Supabase • AWS • Cloudflare • AI APIs • AI Tools • Claude • OpenAI • Gemini',
-  description:
-    'Build digital products end-to-end using AI and modern development tools. Focus on turning ideas and user problems into functional products, rapidly experimenting, learning new technologies, and shipping improvements.',
-};
-
-const targetRoles = [
-  {
-    title: 'Full-Stack Software Engineer',
-    focus: 'Market entry point',
-    description:
-      'Strong foundation in frontend, backend, and shipping production software — the practical entry point into product-building roles.',
-  },
-  {
-    title: 'AI Product Engineer',
-    focus: 'Frontend • Backend • APIs • Databases • AI',
-    description:
-      'Build and ship AI-powered products while working across frontend, backend, APIs, databases, and AI integrations.',
-  },
-  {
-    title: 'Product Engineer',
-    focus: 'Idea → Implementation',
-    description:
-      'Own product features from idea to implementation, combining development, UX, experimentation, debugging, and deployment.',
-  },
-  {
-    title: 'Full-Stack AI Engineer',
-    focus: 'LLMs • Agents • Automation',
-    description:
-      'Build full-stack applications and integrate LLMs, agents, automation, and AI-powered workflows.',
-  },
-  {
-    title: 'AI-Native Product Builder',
-    focus: 'Product thinking × Engineering',
-    description:
-      'Use AI development tools to prototype and ship products quickly, working between product thinking and engineering.',
-  },
-];
-
-const growthStages = [
-  {
-    duration: '2 to 4 Years',
-    title: 'Senior Product Engineer / Senior AI Product Engineer',
-    focus: 'Depth over collecting languages',
-    description:
-      'Become someone who can independently take an ambiguous problem and go: Problem → idea → prototype → AI integration → product → production → iteration. Build depth rather than simply collecting programming languages.',
-    accent: 'indigo',
-  },
-  {
-    duration: '4 to 7 Years',
-    title: 'Product Engineering Lead / AI Product Lead',
-    focus: 'Hands-on leadership',
-    description:
-      'Lead product-building initiatives while remaining technically hands-on.',
-    focusAreas: [
-      'Product decisions',
-      'AI adoption',
-      'Architecture',
-      'Rapid experimentation',
-      'User experience',
-      'Technical strategy',
-      'Mentoring',
-      'Shipping',
-    ],
-    accent: 'green',
-  },
-  {
-    duration: '7+ Years',
-    title: 'AI Product Builder / Founder',
-    focus: 'Ownership & creation',
-    description:
-      'Build your own products or work with startups where you can have significant ownership over what gets built.',
-    accent: 'emerald',
-  },
-];
+import { useLanguage } from '../../context/LanguageContext';
 
 const accentStyles = {
   indigo: {
@@ -98,34 +22,44 @@ const accentStyles = {
   },
 };
 
+const stageAccents = ['indigo', 'green', 'emerald'];
+
 export default function Roles() {
+  const { t } = useLanguage();
+  const targets = t('aboutme.roles.targets') || [];
+  const stages = t('aboutme.roles.stages') || [];
+  const summary = t('aboutme.roles.summary') || [];
+
   return (
     <section className="mb-12">
-      <h2 className="text-3xl font-bold mb-8 text-gray-900 dark:text-white">Roles Goals</h2>
+      <h2 className="text-3xl font-bold mb-8 text-gray-900 dark:text-white">
+        {t('aboutme.roles.title')}
+      </h2>
 
-      {/* Current Role */}
       <div className="mb-10 bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6 border-l-4 border-indigo-500">
         <p className="text-sm font-medium tracking-wide uppercase text-indigo-600 dark:text-indigo-400 mb-2">
-          Current focus
+          {t('aboutme.roles.currentFocus')}
         </p>
         <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
-          {currentRole.title}
+          {t('aboutme.roles.currentTitle')}
         </h3>
         <p className="text-sm font-medium text-indigo-600 dark:text-indigo-400 mb-3">
-          {currentRole.stack}
+          {t('aboutme.roles.currentStack')}
         </p>
         <p className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">
-          {currentRole.description}
+          {t('aboutme.roles.currentDescription')}
         </p>
       </div>
 
-      {/* Target Roles */}
       <div className="mb-10">
         <h3 className="text-2xl font-semibold mb-2 text-gray-800 dark:text-gray-200 border-b-2 border-indigo-500 pb-2">
-          Target roles
+          {t('aboutme.roles.targetTitle')}
         </h3>
+        <p className="text-gray-600 dark:text-gray-400 text-sm mb-6">
+          {t('aboutme.roles.targetNote')}
+        </p>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {targetRoles.map((role, index) => (
+          {targets.map((role, index) => (
             <div
               key={index}
               className="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6 border-l-4 border-indigo-500 hover:shadow-xl transition-all duration-300"
@@ -144,14 +78,13 @@ export default function Roles() {
         </div>
       </div>
 
-      {/* Growth Path */}
       <div className="mb-10">
         <h3 className="text-2xl font-semibold mb-6 text-gray-800 dark:text-gray-200 border-b-2 border-green-500 pb-2">
-          Growth path
+          {t('aboutme.roles.growthTitle')}
         </h3>
         <div className="space-y-6">
-          {growthStages.map((stage, index) => {
-            const styles = accentStyles[stage.accent];
+          {stages.map((stage, index) => {
+            const styles = accentStyles[stageAccents[index] || 'indigo'];
             return (
               <div
                 key={index}
@@ -189,27 +122,14 @@ export default function Roles() {
         </div>
       </div>
 
-      {/* Career Path Summary */}
       <div className="mt-8 bg-gradient-to-r from-indigo-50 to-green-50 dark:from-indigo-900/20 dark:to-green-900/20 rounded-lg p-6">
         <h4 className="text-lg font-semibold text-gray-900 dark:text-white mb-3">
-          Career Path Summary
+          {t('aboutme.roles.summaryTitle')}
         </h4>
         <div className="space-y-4 text-gray-600 dark:text-gray-400 text-sm leading-relaxed">
-          <p>
-            My career direction is toward becoming an AI-native product builder.
-          </p>
-          <p>
-            My goal is to become increasingly effective at the complete product-building process: understanding problems, exploring ideas, prototyping, using AI and modern development tools, building functional products, testing them with users, learning from feedback, and continuously improving them.
-          </p>
-          <p>
-            In the near term, I want to target roles such as Full-Stack Software Engineer, Product Engineer, AI Product Engineer, Full-Stack AI Engineer, and AI-Native Product Builder, while continuing to strengthen my technical foundation and learn the latest tools and approaches.
-          </p>
-          <p>
-            In the longer term, I want to move toward Product Engineering Lead, AI Product Lead, and eventually AI Product Builder or Founder, where I can combine technology, AI, product thinking, creativity, and business to create products from idea to reality.
-          </p>
-          <p>
-            The direction is not about moving away from technology. It is about using technology more effectively as a means to build products.
-          </p>
+          {summary.map((paragraph, index) => (
+            <p key={index}>{paragraph}</p>
+          ))}
         </div>
       </div>
     </section>
