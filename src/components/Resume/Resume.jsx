@@ -259,13 +259,13 @@ export default function Resume() {
           <h2 className="text-3xl font-bold text-gray-900 dark:text-white">
            {t('aboutme.intro.title')}
           </h2>
-          <p className="text-gray-600 dark:text-gray-400 leading-relaxed text-justify">
+          <p className="text-gray-600 dark:text-gray-400 leading-relaxed text-left">
             {t('aboutme.intro.p1')}
           </p>
-          <p className="text-gray-600 dark:text-gray-400 leading-relaxed text-justify">
+          <p className="text-gray-600 dark:text-gray-400 leading-relaxed text-left">
             {t('aboutme.intro.p2')}
           </p>
-          <p className="text-gray-600 dark:text-gray-400 leading-relaxed text-justify">
+          <p className="text-gray-600 dark:text-gray-400 leading-relaxed text-left">
             {t('aboutme.intro.p3')}
           </p>
           <Link

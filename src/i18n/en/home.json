@@ -1,6 +1,6 @@
 {
   "hero": {
-    "available": "Available for work",
+    "available": "Welcome",
     "title": "Hey, I'm Julian!",
     "subtitleBefore": "I'm a developer with experience in both front-end and full-stack development, I've worked with various",
     "stacks": "stacks",
@@ -8,8 +8,20 @@
     "hobby": "When I'm not coding, you'll find me playing sports, enjoying anime and manga, gaming, or exploring the outdoors.",
     "aboutMe": "About me",
     "projects": "Projects",
-    "watchSky": "Watch the sky",
+    "watchSky": "Play my story",
     "exitSky": "Exit sky view"
+  },
+  "story": {
+    "welcomeTitle": "Welcome to my story.",
+    "welcomeSubtitle": "A short story about curiosity, creation, and the journey in between.",
+    "chapters": [
+      "Every great journey starts with a question: What if?",
+      "Driven by curiosity, always learning, always searching for new possibilities.",
+      "From ideas to code, from imagination to things people can use.",
+      "Every step forward brings a new perspective. There is always more to learn, create, and discover."
+    ],
+    "progress": "Chapter {current} of {total}",
+    "skip": "Skip"
   },
   "about": {
     "title": "About Me",

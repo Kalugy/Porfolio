@@ -1,4 +1,68 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
+import { useTheme } from '../../context/ThemeContext';
+
+const CALENDLY_SCRIPT = 'https://assets.calendly.com/assets/external/widget.js';
+
+function getCalendlyUrl(isDarkMode) {
+  const background = isDarkMode ? '000000' : 'ffffff';
+  const text = isDarkMode ? 'ffffff' : '000000';
+  return `https://calendly.com/danieltrujillo902/30min?hide_event_type_details=1&hide_gdpr_banner=1&background_color=${background}&text_color=${text}`;
+}
+
+function BookCall() {
+  const containerRef = useRef(null);
+  const { isDarkMode } = useTheme();
+  const calendlyUrl = getCalendlyUrl(isDarkMode);
+
+  useEffect(() => {
+    const parent = containerRef.current;
+    if (!parent) return undefined;
+
+    const initWidget = () => {
+      if (!window.Calendly || !containerRef.current) return;
+      containerRef.current.innerHTML = '';
+      window.Calendly.initInlineWidget({
+        url: calendlyUrl,
+        parentElement: containerRef.current,
+      });
+    };
+
+    if (window.Calendly) {
+      initWidget();
+      return undefined;
+    }
+
+    let script = document.querySelector(`script[src="${CALENDLY_SCRIPT}"]`);
+    if (!script) {
+      script = document.createElement('script');
+      script.src = CALENDLY_SCRIPT;
+      script.async = true;
+      script.onload = initWidget;
+      document.body.appendChild(script);
+    } else {
+      script.addEventListener('load', initWidget);
+    }
+
+    return () => script.removeEventListener('load', initWidget);
+  }, [calendlyUrl]);
+
+  return (
+    <div className="mb-12">
+      <h3 className="text-2xl font-semibold text-gray-800 dark:text-white mb-3 text-center">
+        Book a call to discuss a project
+      </h3>
+      <p className="text-gray-600 dark:text-gray-400 text-center mb-6 max-w-xl mx-auto">
+        Pick a 30-minute slot and we can talk through your idea.
+      </p>
+      <div
+        ref={containerRef}
+        className="calendly-inline-widget overflow-hidden rounded-xl"
+        data-url={calendlyUrl}
+        style={{ minWidth: '320px', height: '700px' }}
+      />
+    </div>
+  );
+}
 
 const socialLinks = [
   {
@@ -29,7 +93,7 @@ const hireLinks = [
     url: 'https://www.freelancer.com/u/juliant36',
     description: 'Hire me directly on Freelancer.com',
   },
-  {
+  /*{
     name: 'Workana',
     url: 'https://www.workana.com/freelancer/3491e3a263c8133b2540f8791dd8cd21',
     description: 'Find me on Workana for freelance projects',
@@ -38,7 +102,7 @@ const hireLinks = [
     name: 'Upwork',
     url: 'https://www.upwork.com/freelancers/~0158c1b02b82b82269',
     description: 'Connect with me on Upwork',
-  },
+  },*/
 ];
 
 export default function Contact() {
@@ -86,31 +150,33 @@ export default function Contact() {
           </div>
         </div>
 
+        <BookCall />
+
         {/* Hire Me */}
-        <div className="mb-12">
-          <h3 className="text-2xl font-semibold text-gray-800 dark:text-white mb-3 text-center">
+        <div className="mb-12 text-center">
+          <h3 className="text-2xl font-semibold text-gray-800 dark:text-white mb-3">
             Hire Me
           </h3>
-          <p className="text-gray-600 dark:text-gray-400 text-center mb-6 max-w-xl mx-auto">
-            Available for freelance work. Reach me on these platforms:
+          <p className="text-gray-600 dark:text-gray-400 mb-6 max-w-xl mx-auto">
+            Available for freelance work. You can hire me directly here:
           </p>
-          <div className="grid md:grid-cols-3 gap-6">
+          <div className="flex justify-center">
             {hireLinks.map((profile) => (
               <a
                 key={profile.name}
                 href={profile.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group bg-gray-50 dark:bg-gray-800 p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
+                className="group w-full max-w-md bg-gray-50 dark:bg-gray-800 p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
               >
-                <h4 className="text-xl font-semibold text-gray-900 dark:text-white group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors duration-300">
+                <h4 className="text-2xl font-semibold text-gray-900 dark:text-white group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors duration-300">
                   {profile.name}
                 </h4>
-                <p className="text-gray-600 dark:text-gray-400 mt-2 text-sm">
+                <p className="text-gray-600 dark:text-gray-400 mt-2">
                   {profile.description}
                 </p>
-                <span className="inline-block mt-4 text-sm font-medium text-indigo-600 dark:text-indigo-400">
-                  Visit profile →
+                <span className="inline-flex mt-6 px-6 py-3 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition-colors duration-300 font-medium">
+                  Visit profile
                 </span>
               </a>
             ))}

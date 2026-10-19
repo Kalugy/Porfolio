@@ -9,6 +9,9 @@
     "theme": "Theme",
     "brand": "Julian's Portfolio"
   },
+  "footer": {
+    "madeIn": "Made with care in Colombia"
+  },
   "language": {
     "label": "Language",
     "en": "English",

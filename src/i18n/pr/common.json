@@ -9,6 +9,9 @@
     "theme": "Tema",
     "brand": "Portfólio do Julian"
   },
+  "footer": {
+    "madeIn": "Feito com carinho na Colômbia"
+  },
   "language": {
     "label": "Idioma",
     "en": "English",

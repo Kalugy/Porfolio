@@ -1,6 +1,6 @@
 {
   "hero": {
-    "available": "Disponível para trabalhar",
+    "available": "Bem-vindo",
     "title": "Olá, eu sou o Julian!",
     "subtitleBefore": "Sou desenvolvedor com experiência em front-end e full-stack. Já trabalhei com várias",
     "stacks": "stacks",
@@ -8,8 +8,20 @@
     "hobby": "Quando não estou programando, você me encontra praticando esportes, curtindo anime e mangá, jogando ou explorando a natureza.",
     "aboutMe": "Sobre mim",
     "projects": "Projetos",
-    "watchSky": "Ver o céu",
+    "watchSky": "Ver minha história",
     "exitSky": "Sair da visão do céu"
+  },
+  "story": {
+    "welcomeTitle": "Bem-vindo à minha história.",
+    "welcomeSubtitle": "Uma breve história sobre curiosidade, criação e o caminho entre elas.",
+    "chapters": [
+      "Toda grande jornada começa com uma pergunta: E se?",
+      "Movido pela curiosidade, sempre aprendendo, sempre buscando novas possibilidades.",
+      "Das ideias ao código, da imaginação a coisas que as pessoas podem usar.",
+      "Cada passo à frente traz uma nova perspectiva. Sempre há mais para aprender, criar e descobrir."
+    ],
+    "progress": "Capítulo {current} de {total}",
+    "skip": "Pular"
   },
   "about": {
     "title": "Sobre mim",

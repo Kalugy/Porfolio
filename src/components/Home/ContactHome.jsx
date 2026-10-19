@@ -1,100 +1,89 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { FaEnvelope, FaGithub, FaLinkedin } from 'react-icons/fa';
+import { SiFreelancer, SiKofi } from 'react-icons/si';
 import { useLanguage } from '../../context/LanguageContext';
 
 const socialLinks = [
-  {
-    name: 'Gmail',
-    url: 'mailto:danieltrujillo902@gmail.com',
-    icon: 'https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white',
-  },
-  {
-    name: 'GitHub',
-    url: 'https://github.com/Kalugy',
-    icon: 'https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white',
-  },
-  {
-    name: 'LinkedIn',
-    url: 'https://www.linkedin.com/in/julian-trujillo-92b0b8143/',
-    icon: 'https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white',
-  },
-  {
-    name: 'Freelancer.com',
-    url: 'https://www.freelancer.com/u/juliant36',
-    icon: 'https://img.shields.io/badge/Freelancer-000000?style=for-the-badge&logo=freelancer&logoColor=white',
-  },
-  {
-    name: 'Ko-fi',
-    url: 'https://ko-fi.com/kalugy',
-    icon: 'https://img.shields.io/badge/Ko--fi-FF5E5B?style=for-the-badge&logo=ko-fi&logoColor=white',
-  }
+  { name: 'Gmail', url: 'mailto:danieltrujillo902@gmail.com', icon: FaEnvelope },
+  { name: 'GitHub', url: 'https://github.com/Kalugy', icon: FaGithub },
+  { name: 'LinkedIn', url: 'https://www.linkedin.com/in/julian-trujillo-92b0b8143/', icon: FaLinkedin },
+  { name: 'Freelancer.com', url: 'https://www.freelancer.com/u/juliant36', icon: SiFreelancer },
+  { name: 'Ko-fi', url: 'https://ko-fi.com/kalugy', icon: SiKofi },
 ];
 
 export default function ContactHome() {
   const { t } = useLanguage();
 
   return (
-    <section id="contact" className="py-20 px-4 bg-white dark:bg-gray-900">
-      <div className="max-w-5xl mx-auto">
-        <div className="flex items-center justify-between mb-12">
+    <section id="contact" className="relative bg-white px-4 py-20 dark:bg-gray-900">
+      <div className="mx-auto max-w-5xl">
+        <div className="mb-10 flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
           <div>
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">{t('home.contact.title')}</h2>
-            <p className="text-gray-600 dark:text-gray-400 text-lg">
+            <h2 className="mb-3 text-4xl font-bold text-gray-900 dark:text-white md:text-5xl">
+              {t('home.contact.title')}
+            </h2>
+            <p className="max-w-xl text-lg text-gray-600 dark:text-gray-400">
               {t('home.contact.description')}
             </p>
           </div>
           <Link
             onClick={() => window.scrollTo(0, 0)}
             to="/contact"
-            className="text-indigo-600 dark:text-indigo-400 hover:text-indigo-500 dark:hover:text-indigo-300 transition-colors duration-300 font-medium"
+            className="shrink-0 font-medium text-indigo-600 transition-colors hover:text-indigo-500 dark:text-indigo-400 dark:hover:text-indigo-300"
           >
             {t('home.contact.viewAll')}
           </Link>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-8">
-          {/* Quick Contact */}
-          <div className="bg-gray-50 dark:bg-gray-800 p-6 rounded-xl shadow-lg">
-            <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">{t('home.contact.quickContact')}</h3>
-            <a
-              href="mailto:danieltrujillo902@gmail.com"
-              className="text-xl text-indigo-600 dark:text-indigo-400 hover:text-indigo-500 dark:hover:text-indigo-300 transition-colors duration-300 block mb-4"
-            >
-              danieltrujillo902@gmail.com
-            </a>
-            <p className="text-gray-600 dark:text-gray-400">
-              {t('home.contact.quickContactText')}
-            </p>
-          </div>
-
-          {/* Social Links */}
-          <div className="bg-gray-50 dark:bg-gray-800 p-6 rounded-xl shadow-lg">
-            <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">{t('home.contact.connect')}</h3>
-            <div className="flex flex-wrap gap-4">
-              {socialLinks.map((link) => (
-                <a
-                  key={link.name}
-                  href={link.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="transition-transform duration-300 hover:scale-105"
-                >
-                  <img
-                    src={link.icon}
-                    alt={`${link.name} badge`}
-                    className="h-10"
-                  />
-                </a>
-              ))}
+        <div className="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm dark:border-gray-800 dark:bg-gray-900 md:p-8">
+          <div className="grid gap-8 md:grid-cols-2 md:items-center">
+            <div>
+              <p className="mb-2 text-sm font-medium uppercase tracking-wide text-indigo-600 dark:text-indigo-400">
+                {t('home.contact.quickContact')}
+              </p>
+              <a
+                href="mailto:danieltrujillo902@gmail.com"
+                className="block text-xl font-semibold text-gray-900 transition-colors hover:text-indigo-600 dark:text-white dark:hover:text-indigo-400 md:text-2xl"
+              >
+                danieltrujillo902@gmail.com
+              </a>
+              <p className="mt-3 text-gray-600 dark:text-gray-400">
+                {t('home.contact.quickContactText')}
+              </p>
+            </div>
+            <div>
+              <p className="mb-4 text-sm font-medium uppercase tracking-wide text-gray-500 dark:text-gray-400">
+                {t('home.contact.connect')}
+              </p>
+              <div className="flex flex-wrap gap-3">
+                {socialLinks.map((link) => {
+                  const Icon = link.icon;
+                  return (
+                    <a
+                      key={link.name}
+                      href={link.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label={link.name}
+                      title={link.name}
+                      className="flex h-11 w-11 items-center justify-center rounded-full border border-gray-200 text-gray-700 transition hover:border-indigo-500 hover:text-indigo-600 dark:border-gray-700 dark:text-gray-200 dark:hover:text-indigo-400"
+                    >
+                      <Icon size={18} />
+                    </a>
+                  );
+                })}
+              </div>
             </div>
           </div>
         </div>
 
-        {/* Freelance Availability */}
-        <div className="mt-8 bg-gray-50 dark:bg-gray-800 p-6 rounded-xl shadow-lg">
-          <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+        <div className="mt-6 grid gap-6 md:grid-cols-2">
+          <div className="flex flex-col justify-between rounded-2xl border border-gray-200 bg-white p-6 shadow-sm dark:border-gray-800 dark:bg-gray-900">
             <div>
-              <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mb-2">{t('home.contact.freelanceTitle')}</h3>
+              <h3 className="mb-2 text-2xl font-semibold text-gray-900 dark:text-white">
+                {t('home.contact.freelanceTitle')}
+              </h3>
               <p className="text-gray-600 dark:text-gray-400">
                 {t('home.contact.freelanceText')}
               </p>
@@ -103,18 +92,17 @@ export default function ContactHome() {
               href="https://www.freelancer.com/u/juliant36"
               target="_blank"
               rel="noopener noreferrer"
-              className="px-6 py-3 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition-colors duration-300 text-center font-medium shrink-0"
+              className="mt-6 inline-flex w-fit rounded-lg bg-indigo-600 px-6 py-3 font-medium text-white transition-colors hover:bg-indigo-700"
             >
               {t('home.contact.hireMe')}
             </a>
           </div>
-        </div>
 
-        {/* Donate */}
-        <div className="mt-8 bg-gray-50 dark:bg-gray-800 p-6 rounded-xl shadow-lg">
-          <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+          <div className="flex flex-col justify-between rounded-2xl border border-gray-200 bg-white p-6 shadow-sm dark:border-gray-800 dark:bg-gray-900">
             <div>
-              <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mb-2">{t('home.contact.supportTitle')}</h3>
+              <h3 className="mb-2 text-2xl font-semibold text-gray-900 dark:text-white">
+                {t('home.contact.supportTitle')}
+              </h3>
               <p className="text-gray-600 dark:text-gray-400">
                 {t('home.contact.supportText')}
               </p>
@@ -123,7 +111,7 @@ export default function ContactHome() {
               href="https://ko-fi.com/kalugy"
               target="_blank"
               rel="noopener noreferrer"
-              className="px-6 py-3 bg-[#FF5E5B] text-white rounded-lg hover:bg-[#e54e4b] transition-colors duration-300 text-center font-medium shrink-0"
+              className="mt-6 inline-flex w-fit rounded-lg bg-[#FF5E5B] px-6 py-3 font-medium text-white transition-colors hover:bg-[#e54e4b]"
             >
               {t('home.contact.donate')}
             </a>
